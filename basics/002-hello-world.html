@@ -1,0 +1,63 @@
+<!--
+Javascript Hello World
+======================
+
+The main pourpose of Javascript is to deal with the page's DOM
+in order to create rich experience web applications.
+
+With Javascript you can:
+
+- refer to DOM elements into the page
+- read / write DOM properties
+- create new DOM elements
+- modify the page's DOM structure
+- react to user's actions on page's DOM elements
+
+The following code example is not that easy but it uses all the
+stuff listed above.
+
+Just try to get an overall understanding of it.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS002 - Hello World (with DOM)</title>
+</head>
+<body>
+    
+    <div>
+        <label for="my-name">What's your name?</label><br>
+        <input type="text" name="my-name">
+        <button id="btn1">Say Hello!</button>
+    </div>
+    
+    
+    <script>
+    // refer to exising DOM elements by ID or name attribute:
+    var btn1 = document.getElementById('btn1');
+    var fld1 = document.getElementsByName('my-name')[0];
+    
+    // define a function that does something cool
+    function onClickOnButton() {
+        
+        // read from a DOM element property
+        var name = fld1.value;
+        
+        // create a brand new DOM element
+        var newDiv = document.createElement('div');
+        
+        // write into a DOM element property
+        newDiv.innerHTML = 'Hello <b>' + name + '</b>!'
+        
+        // modify the page's DOM structure by appending the new DOM element
+        document.body.appendChild(newDiv);
+    }
+    
+    // react to user's actions on page's DOM elements
+    btn1.addEventListener('click', onClickOnButton);
+    </script>
+    
+</body>
+</html>

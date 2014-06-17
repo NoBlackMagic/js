@@ -1,0 +1,151 @@
+<!--
+Javascript - Conditionals
+=========================
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS004 - Conditionals</title>
+</head>
+<body>
+    
+    <script>
+    
+    // "prompt()" is a native function to ask for user input
+    // (https://developer.mozilla.org/en-US/docs/Web/API/Window.prompt)
+    //
+    // "propmt()" return a string so we use "parseInt()" to convert the 
+    // string into a numeric value
+    var number = parseInt(prompt('give me a number from 1 to 10'));
+    
+    /**
+     * Single branch conditional:
+     */
+    if (number > 5) {
+        console.log('the number is greater than 5');
+    }
+    
+    if (number <= 5) {
+        console.log('the number is lower or equal to 5');
+    }
+    
+    
+    
+    /**
+     * Double branch conditional:
+     */
+    if (number % 2 === 0) {
+        console.log('the number is EVEN');
+    } else {
+        console.log('the number is ODD');
+    }
+    
+    
+    
+    /**
+     * Multiple branches conditional:
+     */
+    switch (number) {
+        case 1:
+            console.log('the number is one');
+            break;
+        case 2:
+            console.log('the number is two');
+            break;
+        case 3:
+        case 4:
+        case 5:
+            console.log('the number is among 3, 4, 5');
+            break;
+        default:
+            console.log('the number is greater than 5');
+    }
+    
+    
+    
+    /**
+     * Season Detector
+     */
+    
+    var now = new Date();
+    var currentMonth = now.getMonth();
+    var currentSeason;
+    var seasonColor;
+    
+    // detect season name with a **chained conditional**
+    if (currentMonth >= 2 && currentMonth <= 4) {
+        currentSeason = 'spring';
+        seasonColor = '#a7e388';
+        
+    } else if (currentMonth >= 5 && currentMonth <= 7) {
+        currentSeason = 'summer';
+        seasonColor = '#fff959';
+        
+    } else if (currentMonth >= 8 && currentMonth <= 10) {
+        currentSeason = 'autumn';
+        seasonColor = '#b9a46c';
+        
+    } else {
+        currentSeason = 'winter';
+        seasonColor = '#62b0cc';
+    }
+    
+    // change page aspect based on the current season
+    document.body.innerHTML = 'it\'s <b>' + currentSeason.toUpperCase() + '</b>';
+    document.body.style.background = seasonColor;
+    
+    /**
+     * Months in Javascript
+     * -- it is 1 less than for human beings!
+     *
+     * spring: 
+     * 2 = mar
+     * 3 = apr
+     * 4 = may
+     * 
+     * summer:
+     * 5 = jun
+     * 6 = jul
+     * 7 = aug
+     * 
+     * autumn:
+     * 8 = sep
+     * 9 = oct
+     * 10 = nov
+     * 
+     * winter:
+     * 11 = dec
+     * 0 = jan
+     * 1 = feb
+     */
+     
+     
+     
+    
+    /**
+     * Equality Expressions
+     * ====================
+     *
+     * to check if a variable is really equal of another you must
+     * use "===" operator.
+     *
+     * the classic "==" operator in Javascript is not type sensitive!
+     *
+     * IMPORTANT:
+     * this difference is the source of havy headaches for programmers who
+     * dont't spend the time to deeply understand this concept.
+     */
+     
+    console.log("1 == '1'", 1 == '1');
+    console.log("1 === '1'", 1 === '1');
+    console.log("1 != '1'", 1 != '1');
+    console.log("1 !== '1'", 1 !== '1');
+    
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!--
+Javascript - Variables
+======================
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS003 - Variables</title>
+</head>
+<body>
+    
+    <script>
+    
+    // define a variable
+    var name = 'Marco';
+    var surname = 'Pegoraro';
+    var age = 35;
+    var isMarried = true;
+    
+    // read a variable content and debug it
+    console.log(name);
+    console.log('age:', age);
+    
+    // concatenate variables:
+    console.log(name + surname);
+    
+    // mix variables with raw values
+    console.log(name + ' ' + surname);
+    
+    // appending to a variable:
+    var presentation = 'Hi, I\'m ' + name + ' ' + surname;
+    presentation += ', I\'m ' + age;
+    presentation += ' years old';
+    console.log(presentation);
+    
+    // playing with numbers
+    var futureAge = age + 1;
+    console.log('next year I will be:', futureAge);
+    
+    // playng with booleans
+    var isSingle = !isMarried;
+    console.log('is married:', isMarried);
+    console.log('is single:', isSingle);
+    
+    </script>
+    
+</body>
+</html>
