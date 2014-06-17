@@ -1,0 +1,137 @@
+<!--
+Javascript - Functions
+======================
+
+Functions are the core blocks of big programs. 
+They allow to split a big problem into little ones enhancing modularity.
+
+Mozilla Developer Network:
+- [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS005 - Functions</title>
+</head>
+<body>
+    
+    <script>
+    
+    /**
+     * With the concept of "function" we can give a name to a list of instruction.
+     */
+    function doSomething() {
+        console.log('do something');
+        console.log('and more!');
+    }
+    
+    /**
+     * Then we can use that name to run all the represented instructions
+     * many many times:
+     */
+    doSomething();
+    doSomething();
+    doSomething();
+    
+    
+    /**
+     * A function can take one or more **arguments** which allow the function
+     * to do useful stuff:
+     */
+    
+    function sayHello(name) {
+        console.log('Hello', name.toUpperCase(), '!');
+    }
+    
+    /**
+     * Then we can use the same function with different values to obtain
+     * different results.
+     */
+    
+    sayHello('Marco');
+    sayHello('Silvia');
+    
+    /**
+     * Very often a function wrap a complex logic then return
+     * a computed value
+     */ 
+    
+    function sum(a, b) {
+        return a + b;
+    }
+    
+    console.log('1 + 1 =', sum(1, 1));
+    console.log('5 + 2 =', sum(5, 2));
+    
+    /**
+     * Function names should always be camelCased:
+     *
+     * my_function_name (BAD)
+     *
+     * myFunctionName (GOOD)
+     */
+    
+    
+    
+    /**
+     * Season Detector
+     * (modular version)
+     *
+     * Here is the previous season detector example where all the code
+     * that should be somehow reusable is wrapped into a function.
+     *
+     * Each function has a **single responsability** which is a very
+     * important concept because by following it you'll write simple
+     * clean and testable code.
+     */
+    
+    function getCurrentMonth() {
+        var now = new Date();
+        return now.getMonth();
+    }
+    
+    function getCurrentSeason(month) {
+        if (month >= 2 && month <= 4) {
+            return 'spring';
+
+        } else if (month >= 5 && month <= 7) {
+            return 'summer';
+
+        } else if (month >= 8 && month <= 10) {
+            return 'autumn';
+
+        } else {
+            return 'winter';
+        }
+    }
+    
+    function getSeasonColor(season) {
+        switch (season) {
+            case 'spring':
+                return '#a7e388';
+            case 'summer':
+                return '#fff959';
+            case 'autumn':
+                return '#b9a46c';
+            case 'winter':
+                return '#62b0cc';
+        }
+    }
+    
+    /**
+     * use above functions to implement the exercise:
+     */
+    
+    // the output of one function should be used as input argument for another!
+    var currentSeason = getCurrentSeason(getCurrentMonth());
+    var seasonColor = getSeasonColor(currentSeason);
+    
+    document.body.innerHTML = 'it\'s <b>' + currentSeason.toUpperCase() + '</b>';
+    document.body.style.background = seasonColor;
+    
+    </script>
+    
+</body>
+</html>
