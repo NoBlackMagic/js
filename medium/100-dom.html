@@ -1,0 +1,240 @@
+<!--
+Javascript DOM
+==============
+
+The Document Object Model is basically the **structure of tags which compose a web page**.
+They exists as a "tree" so you can have strong relations as
+
+- parent
+- child
+- sibling
+
+Javascript offers some good tools to deal whith this structure and you can
+perform almost whatever actions you may want to do.
+
+However sometime it is more easy - or more time efficient - to use some 
+DOM abstraction libraries.
+
+The absolutely most famous is jQuery which drawback is to have a big big footprint.
+There are also many micro libraries (http://microjs.com) that can help in accomplish this task.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS100 - DOM</title>
+</head>
+<body>
+    
+    <p id="p1">First Div</p>
+    
+    <form id="f1" action="#">
+        <input type="text" name="fld1" placeholder="field1">
+        <input type="submit" name="sb1" value="Submit Form2">
+    </form>
+    
+    <form id="f2" action="#">
+        <input type="text" name="fld1" placeholder="field1">
+        <input type="submit" name="sb2" value="Submit Form2">
+    </form>
+    
+    <!-- inline script -->
+    <script>
+    
+    
+    /**
+     * document.getElementById()
+     * =========================
+     *
+     * you can get a reference to a DOM element using it's ID property.
+     * "document" is an object which refer to the actual HTML page.
+     *
+     * An HTML ID property must be unique in a document so this method 
+     * returns a single **reference object** or a _null_ value.
+     *
+     * -[MDN getElementById](https://developer.mozilla.org/en-US/docs/Web/API/document.getElementById)
+     */
+    
+    /* DEMO */ console.group('getElementById()');
+        
+    console.log(document.getElementById('p1'));
+
+    // if you try to access a non existing DOM node you get a "null" value
+    console.log(document.getElementById('i-do-not-exists'));
+
+    // so you can use that values into a conditional:
+    if (document.getElementById('p1') !== null) {
+        console.log('"p#p1" exists!');
+    }
+
+    if (document.getElementById('i-do-not-exists') === null) {
+        console.log('"#i-do-not-exists" does NOT exist!');
+    }
+
+    // you can also store that reference into a variable for further usage:
+    var p1 = document.getElementById('p1');
+    console.log(p1);
+    
+    /* DEMO */ console.groupEnd();
+    
+    
+    
+    
+    
+    
+    /**
+     * document.getElementsByName()
+     * ============================
+     *
+     * This method uses the "name" property of a DOM node. 
+     * that property should be unique within a FORM node but not withing the whole document.
+     *
+     * so that we will alwais receive an _array_ of matching results, no matter
+     * if there are only one matching event or none at all!
+     *
+     * A very similar method is "getElementsByTagName()" which has the same behaviors but 
+     * allow you to fetch all "P" or all "DIV" from a DOM document
+     *
+     * - [MDN getElementsByName](https://developer.mozilla.org/en-US/docs/Web/API/document.getElementsByName)
+     * - [MDN getElementsByTagName](https://developer.mozilla.org/en-US/docs/Web/API/Element.getElementsByTagName)
+     */
+    
+    /* DEMO */ console.group('getElementsByName()');
+        
+    console.log(document.getElementsByName('fld1'));
+    console.log(document.getElementsByName('sb1'));
+    console.log(document.getElementsByName('non-existing-name'));
+
+    // reference the first "fld1" in the whole page
+    var firstField = document.getElementsByName('fld1')[0];
+
+    // test if a DOM node exists by it's name
+    if (document.getElementsByName('fld1').length > 0) {
+        console.log('THERE IS AT LEAST 1 "name=fld" DOM nodes in the page');
+    }
+
+    if (document.getElementsByName('non-existing').length === 0) {
+        console.log('THERE ARE NO "name=non-existing" DOM nodes in the page');
+    }
+                         
+    /* DEMO */ console.groupEnd();
+    
+    
+    
+    
+    
+    
+    /**
+     * Querying the DOM tree
+     *
+     * - [MDN document.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/document.querySelector)
+     * - [MDN element.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/element.querySelector)
+     * - [MDN document.querySelectorAll](https://developer.mozilla.org/en/docs/Web/API/Document.querySelectorAll)
+     * - [MDN element.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Element.querySelectorAll)
+     */
+    
+    /* DEMO */ console.group('Querying the DOM tree');
+        
+    console.log('querySelector - form', document.querySelector('form')); 
+    console.log('querySelectorAll - form', document.querySelectorAll('form'));
+    
+    // filter by DOM attribute                     
+    console.log('querySelector - input', document.querySelectorAll('input'));
+    console.log('querySelector - input[type=text]', document.querySelectorAll('input[type=text]'));
+                         
+    // sub query
+    var form1 = document.querySelector('#f1');
+    console.log('form1\'s inputs', form1.querySelectorAll('input'));
+                         
+    /* DEMO */ console.groupEnd();
+    
+    
+    
+    /**
+     * Read / Write DOM node attributes
+     */
+    
+    /* DEMO */ console.group('read / write DOM attributes');
+    
+    var fieldOne = document.querySelector('#f1 [name=fld1]');
+    fieldOne.style.border = '2px solid green';
+                         
+    var fieldTwo = document.querySelector('#f2 [name=fld1]');
+    fieldTwo.style['border-color'] = 'red';
+    fieldTwo.style['border-width'] = '2px';
+                         
+    console.log('fieldTwo style:', fieldTwo.style);
+    console.log('fieldTwo border:', fieldTwo.style.border);
+                         
+    /* DEMO */ console.groupEnd();
+    
+    
+    
+    
+    
+    /**
+     * Create new DOM elements
+     *
+     * - [MDN createElement](https://developer.mozilla.org/en-US/docs/Web/API/document.createElement)
+     */
+    
+    var aNewDiv = document.createElement('div');
+    
+    var aNewP = document.createElement('p');
+    aNewP.innerHTML = 'this is <b>just</b> a new P';
+    
+    
+    
+    
+    
+    /**
+     * Modify DOM's tree
+     *
+     * - [MDN appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node.appendChild)
+     * - [MDN removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node.removeChild)
+     * - [MDN createTextNode](https://developer.mozilla.org/en-US/docs/Web/API/document.createTextNode)
+     */
+    
+    // add some text to the new DIV element then append it into the BODY
+    aNewDiv.appendChild(document.createTextNode('this is just text'));
+    document.body.appendChild(aNewDiv);
+    
+    // append the new P into the already placed DIV:
+    aNewDiv.appendChild(aNewP);
+    
+    // it's a long process to remove stuff from the DOM!
+    var boldTag = aNewP.getElementsByTagName('b')[0];
+    aNewP.removeChild(boldTag);
+    
+    
+    
+    
+    /**
+     * add / remove class
+     *
+     * - [MDN classList](https://developer.mozilla.org/en-US/docs/Web/API/Element.classList)
+     *
+     * NOTE: in many old browsers (aka IE) this is not supported but you can **shim** it
+     *       and a shim implementation is included within the above MDN resource.
+     */
+    
+    var el = document.getElementById('p1');
+    
+    el.classList.add('cl1');
+    console.log('el class:', el.className);
+    
+    el.classList.add('cl2');
+    console.log('el class:', el.className);
+    
+    el.classList.remove('cl1');
+    console.log('el class:', el.className);
+    
+    
+    
+     
+     
+    </script>
+    
+</body>
+</html>
