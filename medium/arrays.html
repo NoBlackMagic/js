@@ -220,6 +220,51 @@ Javascript DOM
     
     console.groupEnd();
     
+    
+    
+    
+    
+    
+    /**
+     * Every / Some
+     *
+     * - [MDN every](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+     * - [MDN some](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+     */
+    
+    console.group('Every / Some');
+    
+    // do all StarWars characters have name and surname?
+    answer = cast.every(function(item) {
+        return item.name.split(' ').length > 1;
+    });
+    
+    console.log('do all StarWars characters have name and surname?', answer);
+    
+    // I can apply the same callback to many tests!
+    
+    function onBothSerie(item) {
+        return item.serie.length > 1;
+    }
+    
+    console.log('do ALL StarWars character act in both original and new serie?', cast.every(onBothSerie));
+    console.log('do AT LEAST ONE StarWars character act in both original and new serie?', cast.some(onBothSerie));
+    
+    console.groupEnd();
+    
+    
+    
+    
+    
+    /**
+     * EXERCISES:
+     *
+     * - list all good characters which act in the original serie
+     * - list all good characters which act ONLY in the original serie
+     * - list all good characters which act in BOTH the original and newserie
+     * - do at least one character name begin with the same letter of the surname?
+     */
+    
     </script>
     
 </body>
