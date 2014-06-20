@@ -1,0 +1,235 @@
+<!--
+Javascript Scope
+================
+
+- [MDN Scope](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS100 - Scope</title>
+</head>
+<body>
+    
+    <!-- inline script -->
+    <script>
+    
+    
+    /**
+     * "this" is a Javascript keyword which is available into every function,
+     * -- and it should have a **different value** in each function --
+     *
+     * this is also called "scope" of the function.
+     *
+     * by default the scope of a global function is the _window_ object.
+     */
+    
+    console.group('Default Functions Scope');
+    
+    function foo() {
+        console.log('foo() scope is:', this);
+    }
+    
+    foo();
+    
+    console.groupEnd();
+    
+    
+    
+    
+    /**
+     * If we invoke an object's method then the standard scope for that
+     * function it will be the object itself.
+     *
+     * This is cool because it allows to create little magic tricks!
+     */
+    
+    console.group('Objects Scope');
+    
+    var user1 = {
+        name: 'Luke',
+        surname: 'Skywalker',
+        getFullName: function() {
+            console.log('user1.getFullName() scope is:', this);
+            return this.name + ' ' + this.surname;
+        }
+    };
+    
+    console.log('user1\'s full name is:', user1.getFullName());
+    
+    /**
+     * I can share the same function between different objects.
+     * The scope of that function is set at the invocation moment.
+     *
+     * So if I reference a function from "user2" into "user2" then
+     * it will take "user2" scope when called as a "user2" method.
+     */
+    
+    var user2 = {
+        name: 'Darth',
+        surname: 'Vader',
+        getFullName: user1.getFullName
+    };
+    
+    console.log('user2\'s full name is:', user2.getFullName());
+    
+    /**
+     * In this third example "user3" has no way to gather it's full name!
+     * But I can borrow the method from one of the other user's and just
+     * explicitly set it's scope!
+     */
+    
+    var user3 = {
+        name: 'Ian',
+        surname: 'Solo'
+    };
+    
+    console.log('user3\'s full name is:', user2.getFullName.call(user3));
+    
+    console.groupEnd();
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * Instances of the same constructor keeps their own scope.
+     *
+     * there is no "native" way to share stuff between instances but
+     * the "outer scope"... we will see it when talking about "closures".
+     *
+     */
+    
+    console.group('Instances Scope');
+    
+    var User = function(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+    
+    User.prototype.getFullName = function() {
+        console.log('User.getFullName() scope is:', this);
+        return this.name + ' ' + this.surname;
+    };
+    
+    var user1 = new User('Luke', 'Skywalker');
+    console.log('user1\'s full name is:', user1.getFullName());
+    
+    var user2 = new User('Darth', 'Vader');
+    console.log('user2\'s full name is:', user2.getFullName());
+    
+    var user3 = new User('Ian', 'Solo');
+    console.log('user3\'s full name is:', user3.getFullName());
+    
+    console.groupEnd();
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * Here we have two nested functions which just debug their own scope.
+     *
+     * The first call it is generic and we can observe that both the functions
+     * scope refer to the window object because they have no more specific informations.
+     *
+     * In the second call we give an explicit scope to "foo()" and, as expected,
+     * it will be correctly debugged.
+     * The point is that "foo2()" is still called without any specific informations
+     * about which scope to use so it will receive the window scope another time.
+     */
+    
+    console.group('Nested Functions Scope');
+    
+    function foo1() {
+        function nested() {
+            console.log('nested() scope is:', this);
+        }
+        console.log('foo1() scope is:', this);
+        nested();
+    }
+    
+    // call with no specific scope
+    foo1();
+    
+    // call with an explicit scope
+    foo1.call({ custom:'scope' });
+    
+    console.groupEnd();
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * This example is very similar to the last one but we forward the
+     * foo2's scope down the chain to it's "nested()" function.
+     *
+     * This way "nested()" will always be executed with the same scope of foo2
+     */
+    
+    console.group('Nested Functions :: SCOPE FORWARDING');
+    
+    function foo2() {
+        function nested() {
+            console.log('nested() scope is:', this);
+        }
+        console.log('foo2() scope is:', this);
+        nested.call(this);
+    }
+    
+    // call with no specific scope
+    foo2();
+    
+    // call with an explicit scope
+    foo2.call({ custom:'scope' });
+    
+    console.groupEnd();
+    
+    
+    
+    
+    
+    
+    /**
+     * A very common method to share a function's scope with all
+     * it's nested method is to explicitly define a local variable and
+     * reference the scope you want to share to it.
+     *
+     * Then all the nested functions will have their own scopes and we
+     * don't care about because they all can refer to the local variable.
+     */
+    
+    console.group('Nested Functions :: SCOPE SHARING');
+    
+    function foo3() {
+        var scope = this;
+        function nested() {
+            console.log('nested() scope is:', scope);
+        }
+        console.log('foo5() scope is:', scope);
+        nested();
+    }
+    
+    // call with no specific scope
+    foo3();
+    
+    // call with an explicit scope
+    foo3.call({ custom:'scope' });
+    
+    console.groupEnd();
+    
+    </script>
+    
+</body>
+</html>

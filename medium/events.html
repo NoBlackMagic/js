@@ -1,0 +1,104 @@
+<!--
+Javascript DOM Events
+=====================
+
+Another very important step in Javascript is to catch and handle
+the user input and the way the user interacts with the page itself.
+
+- [MDN addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener)
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS101 - DOM Events</title>
+    
+    <style>
+    p {
+        margin: 50px;
+        padding: 20px;
+        font-size: 3em;
+    }
+    .hover {
+        background: #027b02;
+        color: #fff;
+    }
+    </style>
+    
+</head>
+<body>
+    
+    <p id="p1">Click Me, Hover Me</p>
+    <p id="p2">Click Me, Hover Me</p>
+    
+    <!-- inline script -->
+    <script>
+    
+    var p1 = document.getElementById('p1');
+    
+    
+    /**
+     * The first approach is to wrap some logic into a function
+     * then assign that function as "callback" for an element's event.
+     *
+     * Whenever the "click" event happens on the target element "#p1"
+     * then the assigned function will be executed.
+     */
+    
+    function onClickOnP1() {
+        alert('you clicked on #p1!');
+    }
+    
+    p1.addEventListener('click', onClickOnP1);
+    
+    
+    
+    
+    
+    /**
+     * A sligthly different approach is to write an "anonymous function" 
+     * direct as event handler.
+     *
+     * -- this is a classic way to write compact code --
+     *
+     */
+    
+    p1.addEventListener('mouseover', function() {
+        p1.classList.add('hover');
+    });
+    
+    p1.addEventListener('mouseout', function() {
+        p1.classList.remove('hover');
+    });
+     
+    
+    
+    
+    
+    
+    /**
+     * In this example case I want to assign the same callback
+     * for more than one event.
+     *
+     * Then I choose do just define the callback as a normal function like we
+     * did in the first example.
+     *
+     * The point here is the usage of "this" keyword. It's called "scope"
+     * and in this case it points to the DOM Element which is the
+     * subject of the event itself.
+     */
+    
+    var p2 = document.getElementById('p2');
+    
+    function toggleHoverClass() {
+        this.classList.toggle('hover');
+    }
+     
+    p2.addEventListener('mouseover', toggleHoverClass);
+    p2.addEventListener('mouseout', toggleHoverClass);
+     
+    </script>
+    
+</body>
+</html>
