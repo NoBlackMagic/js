@@ -9,7 +9,7 @@ Javascript - Variables
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=utf-8 />
+    <meta charset="utf-8" />
     <title>JS003 - Variables</title>
 </head>
 <body>
@@ -34,8 +34,8 @@ Javascript - Variables
     
     // appending to a variable:
     var presentation = 'Hi, I\'m ' + name + ' ' + surname;
-    presentation += ', I\'m ' + age;
-    presentation += ' years old';
+    presentation = presentation + ', I\'m ' + age;
+    presentation = presentation + ' years old';
     console.log(presentation);
     
     // playing with numbers
@@ -59,18 +59,23 @@ Javascript - Variables
 
 <!--
 EXERCISE 003-001:
-create your name, surname and age variables.
-then create a new variable in which to put a presentation sentence like:
+create variables: "name", "surname", "age".
+then create a new variable named "presentation" in which to  
+concatenate a presentation sentence like:
 "Hi, I'm Marco Pegoraro and I'm 32 years old!"
 
 EXERCISE 003-001 (b):
-do the above exercise within 1 single line of code
+use the "name", "surname" and "age" variables from the previous
+exercise then use one single line of code to create "presentation2"
+ which must show the same output of "presentation".
 
 EXERCISE 003-002:
-given a=1, b=2 create the "sum" variable
+given the variables: a=1, b=2 
+create the "sum" variable
 
 EXERCISE 003-003:
-given a=1, b=2, c=3, d=4 update the "sum" variable
+given the variables: a=1, b=2, c=3, d=4 
+update the "sum" variable
 
 EXERCISE 003-004:
 concatenate a string with a number and console log the final type
@@ -85,7 +90,7 @@ console log you name initials
 
 FOR HOME:
 play with variables, types, operators.
-try to sole expressions, work with string's methods, create
+try to solve expressions, work with string's methods, create
 strange logic expressions combining many operators!
 
 -- never stop learning!

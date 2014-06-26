@@ -9,11 +9,15 @@ Mozilla Developer Network:
 - [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 - [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
+Interesting methods being used in the code below:
+- [prompt](https://developer.mozilla.org/en-US/docs/Web/API/Window.prompt)
+- [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+
 -->
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=utf-8 />
+    <meta charset="utf-8" />
     <title>JS004 - Conditionals</title>
 </head>
 <body>
@@ -25,7 +29,8 @@ Mozilla Developer Network:
     //
     // "propmt()" return a string so we use "parseInt()" to convert the 
     // string into a numeric value
-    var number = parseInt(prompt('give me a number from 1 to 10'));
+    //var number = parseInt(prompt('give me a number from 1 to 10'));
+    var number = 2;
     
     /**
      * Single branch conditional:
@@ -49,6 +54,27 @@ Mozilla Developer Network:
         console.log('the number is ODD');
     }
     
+    
+    
+    
+    /**
+     * Waterfall conditional
+     * -- only one of the following branches will be executed! --
+     */
+    
+    var age = 20;
+    
+    if (age > 0 && age <= 10) {
+        console.log('child');
+    } else if (age > 10 && age <= 20) {
+        console.log('boy');
+    } else if (age > 20 && age <= 30) {
+        console.log('young man');
+    } else if (age > 30 && age <= 60) {
+        console.log('man');
+    } else {
+        console.log('old man');
+    }
     
     
     /**
@@ -80,6 +106,7 @@ Mozilla Developer Network:
     var currentMonth = now.getMonth();
     var currentSeason;
     var seasonColor;
+    
     
     // detect season name with a **chained conditional**
     if (currentMonth >= 2 && currentMonth <= 4) {
@@ -157,48 +184,53 @@ Mozilla Developer Network:
 
 <!--
 EXERCISE 004-001:
-prompt for user's age and alert if he/she is over/under 50.
+prompt for user's "age" and alert if he/she is over/under 50.
 
 EXERCISE 004-002:
-prompt for user's name and trigger an alert only if
+prompt for user's "name" and trigger an alert only if
 name's first letter is "m".
 
 EXERCISE 004-003:
-prompt for user's name and surname and create the following alerts when the case:
+prompt for user's "name", prompt for user's "surname" 
+then and create the following alerts if needed:
 - you must insert your name!
 - you must insert your surname!
-- your full name must contain more than 10 chars
-- your full name must contain max 20 chars 
-- you can't input a surname which ends with "a"
+- your "full name" must contain more than 10 chars
+- your "full name" must contain max 20 chars 
+- you can't input a "surname" which ends in "a"
 
 EXERCISE 004-004:
-propmt for user's age then alert these situations:
+propmt for user's "age" then alert these situations:
 - you are too young to drink beer
 - you are too old to fear the warewolf
 - you are good to get a real job
 
 EXERCISE 004-005:
-prompt for user's age and alert a bad message when ALL these conditions happen:
-- the user is greater than 30
-- the user is lower than 40
-- user's age is even
+prompt for user's "age" then alert a bad message when ALL these conditions happen:
+- the user's "age" is greater than 30
+- the user's "age" is lower than 40
+- "user"'s age is even
 
 EXERCISE 004-006:
-prompt for user's age and alert a greeting message when ANY these conditions happen:
-- the user is greater than 30
-- the user is lower than 40
-- user's age is even
+prompt for user's "age" then alert a greeting message when ANY these conditions happen:
+- the user's "age" is greater than 30
+- the user's "age" is lower than 40
+- "user"'s age is even
 
 EXERCISE 004-007:
-prompt for user's name and age and alert a greeting message when:
-- the 3rd letter of the name is "r"
-- the second digit of the age is "2"
+prompt for user's "name", prompt for user's "age",
+then alert a greeting message when:
+- the 3rd letter of the "name" is "r"
+- the second digit of the "age" is "2"
 
 EXERCISE 004-008:
-prompt for user's name and age and alert a greeting message when:
-- the name contains the letter "r"
+prompt for user's "name", propt for user's "age"
+then alert a greeting message when the following conditions:
+- the "name" contains the letter "r"
 - any of these age conditions
-    - the second digit is "2"
-    - the first letter of the english name of the sum of the first and second digit is "f".
+    - the second digit pf the "age" is "2"
+    - the first letter of the english name of the sum of the first and second digit of the "age" is "f".
+
+-- never stop learning!
 
 -->
