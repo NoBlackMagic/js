@@ -143,29 +143,33 @@ Mozilla Developer Network:
 
 <!--
 EXERCISE 005-001:
-create a function that sum 2 numbers
+create a function that return the sum 2 numbers given as parameters
 
 EXERCISE 005-002:
 create a function that take 2 numbers, an operator 
-identifier (1=sum, 2=sub,...) and return the math!
-> sum(1,2) => 3
+identifier ('sum', 'sub',...) and return the math!
+> sum(1, 2, 'sum') => 3
+> sum(4, 2, 'sub') => 2
 
 EXERCISE 005-003:
 create a function that take 2 numbers, an operator 
-identifier (1=sum, 2=sub,...) and return the full 
+identifier ('sum', 'sub',...) and return the full 
 expression as a string!
-> visualCalc(1,2,1) => "1 + 2 = 3"
+> visualCalc(1, 2, 'sum') => "1 + 2 = 3"
+> visualCalc(4, 2, 'sub') => "4 - 2 = 2"
 
 EXERCISE 005-004:
 create the function "getCurrentMonthName()" that return 
-the current month name
+the current month name 
+-- note that the function takes no arguments!
 
 EXERCISE 005-005:
 create the function "getMonthName(date)" that return the 
 month name of a given date
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 EXERCISE 005-006:
-simplify "getCurrentMonthName()" to use "getMonthName(date)"
+simplify "getCurrentMonthName()" code to use "getMonthName(date)"
 as part of it's logic.
 
 EXERCISE 005-007:
