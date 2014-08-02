@@ -1,5 +1,5 @@
-JS Basics
-=========
+JS Spells - Basic
+=================
 
 
 

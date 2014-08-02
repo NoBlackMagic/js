@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>JS Spells | BASIC | expressions, variables, conditionals, functions, arrays, objects, loops</title>
+
+    <link rel="stylesheet" href="//noblackmagic.com/assets/css/nobm.min.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+
+    <!--  Icons -->
+    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-32x32.png" sizes="32x32">
+    <!-- // Icon -->
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Google Analytics -->
+<!--
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-52991368-2', 'auto');
+    ga('send', 'pageview');
+    </script>
+-->
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <a href="http://noblackmagic.com" title="web dev training: javascript, css, html5 tutorials and exercises" id="header-block" class="clearfix">
+                <img id="logo" class="left" alt="NoBlackMagic.com Logo" width="75" src="//noblackmagic.com/assets/images/logo.png" />
+                <div id="title-block" class="left">
+                    <h1>NoBlackMagic.com</h1>
+                    <p>no evil spells required!</p>
+                </div>
+            </a>
+
+            <div class="author-block">
+                <h3>JS Spells <small>Javascript From Scratch</small></h3>
+                <ul>
+                    <li>
+                        <img src="../../assets/images/js.png" alt="Javascript Logo" width="80" class="frame left" />
+                        <p style="padding-top:10px;">
+                            JS is the guy who can <strong>bring life to a web page</strong>.<br>
+                            <i>- he makes things happen</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="mc_embed_signup">
+                <form action="http://noblackmagic.us1.list-manage.com/subscribe/post?u=c0e8c260bf69b2d7c5238d3b0&amp;id=cd2f53a5ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <label for="mce-EMAIL">Keep in touch with us!</label>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#39c; border:#39c; font-size:.9em;font-weight:normal">
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;">
+                        <input type="text" name="b_c0e8c260bf69b2d7c5238d3b0_cd2f53a5ca" tabindex="-1" value="">
+                    </div>
+                </form>
+            </div>
+            
+            <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
+        </header>
+
+        <article>
+
+            <section class="start-block-article">
+                <h1>Variables <small>JS Spells | Basic</small></h1>
+                <blockquote>
+                    <p>
+                        Variables <strong>are containers</strong> for programming data.
+                    </p>
+                </blockquote>
+                <p>
+                    You can think to a variable as <strong>a box with a label</strong>. 
+                </p>
+                <p>
+                    It doesn't really matter what you put
+                    inside that box because <strong>you can refer the box's content using the box's label</strong>.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Create a brand new variable</h2>
+                <p>
+                    To create a new variable you can use the operator <code>var</code> followed by the name you
+                    want to assing to that variable:
+                </p>
+                <pre>var name;</pre>
+                <p>
+                    This is a complete and valid instruction which means:
+                </p>
+                <pre>&raquo; make a box and apply the label "name" on it</pre>
+                <hr>
+                <h3>Try It Yourself!</h3>
+                <div data-jsbox data-jsbox-scripts="jsbox-tests.js">
+                    <pre data-test="testToCreateVariable()">create a variable named "surname"</pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Assign contents to variables</h2>
+                <p>
+                    In Javascript as in life empty boxes are useless so we need to learn how to
+                    put some content into a variable.
+                </p>
+                <p>
+                    It's easy and the simplest way to do it is when you create a new box:
+                </p>
+                <p>
+                    <pre>var name = 'Luke Skywalker';</pre>
+                </p>
+                <p>
+                    But you can also use existing variables and change their contents on the fly:
+                </p>
+                <pre>name = 'Darth Vader';</pre>
+                <hr>
+                <h3>Try It Yourself!</h3>
+                <div data-jsbox data-jsbox-scripts="jsbox-tests.js">
+                    <pre data-js></pre>
+                    <pre data-artifax>var name = 'Luke Skywalker';</pre>
+                    <pre data-test="testToAssignContentsToVariables()">a variable <code>name</code> <b>already exists</b> and contains "Luke Skywalker", turn it to the dark side by assigning "Darth Vedar" to the variable <code>name</code>.<br><br>hint &raquo; try to run <code>console.log(name)</code> to investigate the current value of <code>name</code>.</pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Reading a variable content</h2>
+                <p>
+                    When a variable exists you can access it's content by just using the <strong>variable name</strong>:
+                </p>
+                <pre>var name = 'Luke Skywalker';
+console.log(name); // -> Luke Skywalker</pre>
+               <p>
+                   When it comes to read variable it is more likely that you want to perform some operations
+                   within the variables and maybe save the result in a brand new one:
+               </p>
+                <pre>var num1 = 10;
+var num2 = 20;
+var result = num1 + num2;</pre>
+                <p>
+                    In the last line of the previous code we <strong>read</strong> <code>num1</code> and <code>num2</code> values, we use
+                    them within a <em>sum expression</em> and then we <strong>assign</strong> the resulting value to a new
+                    variable named <code>result</code>.
+                </p>
+                <p>
+                    <strong>It is actually pretty important to understand that in this single line of code we perform 5 instructions:</strong>
+                </p>
+                <ol>
+                    <li>read <code>num1</code></li>
+                    <li>read <code>num2</code></li>
+                    <li>sum <code>num1</code>'s value with <code>num2</code>'s value</li>
+                    <li>create a new variable <code>result</code></li>
+                    <li>assign the result of the previous expression to <code>result</code></li>
+                </ol>
+                <hr>
+                <h3>Try It Yourself!</h3>
+                <div data-jsbox data-jsbox-scripts="jsbox-tests.js">
+                    <pre data-js>var name = 'Luke';
+var surname = 'Skywalker';</pre>
+                    <pre data-test="testReadVariableContent()">comple the existing code in order to create a <code>fullName</code> variable which should contains "Luke Skywalker"</pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Investigating variable types</h2>
+                <p>
+                    When you 
+                </p>
+            </section>
+
+        </article>
+        
+    </div>
+    
+    <!-- Javascript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
+    
+    <!-- JSBox -->
+    <link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
+    <script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
+</body>
+</html>

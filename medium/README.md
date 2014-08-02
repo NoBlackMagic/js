@@ -1,5 +1,5 @@
-JS Medium
-=========
+JS Spells - Medium
+==================
 
 
 
