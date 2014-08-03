@@ -8,8 +8,9 @@
 
     <title>JS Spells | BASIC | expressions, variables, conditionals, functions, arrays, objects, loops</title>
 
-    <link rel="stylesheet" href="//noblackmagic.com/assets/css/nobm.min.css">
-    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="//noblackmagic.com/assets/css/nobm.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/jsbox-loading.css">
 
     <!--  Icons -->
     <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
@@ -36,41 +37,12 @@
 <body>
 
     <div class="wrapper">
-
         <header>
-            <a href="http://noblackmagic.com" title="web dev training: javascript, css, html5 tutorials and exercises" id="header-block" class="clearfix">
-                <img id="logo" class="left" alt="NoBlackMagic.com Logo" width="75" src="//noblackmagic.com/assets/images/logo.png" />
-                <div id="title-block" class="left">
-                    <h1>NoBlackMagic.com</h1>
-                    <p>no evil spells required!</p>
-                </div>
-            </a>
-
-            <div class="author-block">
-                <h3>JS Spells <small>Javascript From Scratch</small></h3>
-                <ul>
-                    <li>
-                        <img src="../../assets/images/js.png" alt="Javascript Logo" width="80" class="frame left" />
-                        <p style="padding-top:10px;">
-                            JS is the guy who can <strong>bring life to a web page</strong>.<br>
-                            <i>- he makes things happen</i>
-                        </p>
-                    </li>
-                </ul>
-            </div>
+            <script src="//noblackmagic.com/assets/js/nobm.min.js?v1"></script>
             
-            <div id="mc_embed_signup">
-                <form action="http://noblackmagic.us1.list-manage.com/subscribe/post?u=c0e8c260bf69b2d7c5238d3b0&amp;id=cd2f53a5ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <label for="mce-EMAIL">Keep in touch with us!</label>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#39c; border:#39c; font-size:.9em;font-weight:normal">
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;">
-                        <input type="text" name="b_c0e8c260bf69b2d7c5238d3b0_cd2f53a5ca" tabindex="-1" value="">
-                    </div>
-                </form>
-            </div>
+            <script src="/assets/js/basic-menu.js"></script>
             
+            <script src="//noblackmagic.com/assets/js/mchimp.min.js?v1"></script>
             <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
         </header>
 
@@ -107,6 +79,7 @@
                 <h3>Try It Yourself!</h3>
                 <div data-jsbox data-jsbox-scripts="jsbox-tests.js">
                     <pre data-test="testToCreateVariable()">create a variable named "surname"</pre>
+                    <pre data-js></pre>
                 </div>
             </section>
             
@@ -129,9 +102,9 @@
                 <hr>
                 <h3>Try It Yourself!</h3>
                 <div data-jsbox data-jsbox-scripts="jsbox-tests.js">
+                    <pre data-artifact>var name = 'Luke Skywalker';</pre>
+                    <pre data-test="testToAssignContentsToVariables()">variable <code>name</code> <b>already exists</b> and contains "Luke Skywalker", turn it to the dark side of the Force by assigning "Darth Vedar" to the variable <code>name</code>.<br><br>hint &raquo; try to run <code>console.log(name)</code> to investigate the current value of <code>name</code>.</pre>
                     <pre data-js></pre>
-                    <pre data-artifax>var name = 'Luke Skywalker';</pre>
-                    <pre data-test="testToAssignContentsToVariables()">a variable <code>name</code> <b>already exists</b> and contains "Luke Skywalker", turn it to the dark side by assigning "Darth Vedar" to the variable <code>name</code>.<br><br>hint &raquo; try to run <code>console.log(name)</code> to investigate the current value of <code>name</code>.</pre>
                 </div>
             </section>
             
@@ -167,9 +140,10 @@ var result = num1 + num2;</pre>
                 <hr>
                 <h3>Try It Yourself!</h3>
                 <div data-jsbox data-jsbox-scripts="jsbox-tests.js">
+                    <pre data-test="testReadVariableContent()">comple the existing code in order to <strong>create</strong> a <code>fullName</code> variable which should contains "Luke Skywalker"</pre>
                     <pre data-js>var name = 'Luke';
 var surname = 'Skywalker';</pre>
-                    <pre data-test="testReadVariableContent()">comple the existing code in order to create a <code>fullName</code> variable which should contains "Luke Skywalker"</pre>
+                    
                 </div>
             </section>
             
