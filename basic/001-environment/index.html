@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>The Environment | JS Spells - BASIC | the javascript environment is the broswer</title>
+
+    <link rel="stylesheet" type="text/css" href="//noblackmagic.com/assets/css/nobm.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/addons.css">
+    <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/jsbox-loading.css">
+
+    <!--  Icons -->
+    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-32x32.png" sizes="32x32">
+    <!-- // Icon -->
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Google Analytics -->
+    <script src="//noblackmagic.com/assets/js/qs.min.js?v1"></script>
+    <script src="//noblackmagic.com/assets/js/ga.min.js?v1&ua=UA-52991368-2"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <script src="//noblackmagic.com/assets/js/nobm.min.js?v1"></script>
+            <script src="/assets/js/basic-menu.js"></script>
+            <script src="//noblackmagic.com/assets/js/mchimp.min.js?v1"></script>
+            <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
+        </header>
+
+        <article>
+
+            <section class="start-block-article">
+                <h1>The Environment <small>JS Spells | Basic</small></h1>
+                <blockquote>
+                    Javascript lives within an HTML web page
+                </blockquote>
+                <p>
+                    <small>
+                        Of course there is the <em>NodeJS</em> exception but for the purpose of these tutorials
+                        we consider the <strong>client side usage of JS</strong>.
+                    </small>
+                </p>
+                <p>
+                    So then <strong>Javascript works with the HTML document that contains or loads the script</strong>.
+                </p>
+                <p>
+                    This sentence implies both benefits and restrictions (most of them are tied to secutiry reasons)
+                    than we need to learn and understant in order to get the most efficient development experience.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Embedded Javascript</h2> 
+                <p>
+                    The right place where to put your first Javascript instruction is a <code>&lt;script></code> tag:
+                </p>
+                <div class="code-block">
+<pre>
+&lt;body>
+    &lt;script>
+        alert('I am Javascript');
+    &lt;/script>
+&lt;/body>
+</pre>
+                </div>
+                <p>
+                    <small>
+                        You can place such tag in both <code>&lt;head></code> and <code>&lt;body></code> but keep in mind
+                        that any Javascript code you place into the document's <code>&lt;head></code> will take some
+                        execution time which delays the page rendering.
+                    </small>
+                </p>
+            </section>
+            
+            <section>
+                <h2>Linked Javascript</h2>
+                <p>
+                    When your code grows big you may find a good practice to move it to dedicated <code>.js</code> files
+                    which you link within the document:
+                </p>
+                <div class="code-block">
+<pre>
+&lt;body>
+    &lt;script src="./path/to/my/script.js">&lt;/script>
+&lt;/body>
+</pre>
+                </div>
+                <p>
+                    <small>
+                        This is the classic approach to link libraries such <em>jQuery</em>.<br>
+                        If you place such instructions into the document's <code>&lt;head></code> you'll delay
+                        the page rendering of both download time + execution time.
+                    </small>
+                </p>
+            </section>
+            
+            <section>
+                <blockquote>
+                    Always remember that <strong>the best place for Javascript</strong> is the document's body close to the <code>&lt;/body></code> tag!
+                </blockquote>
+            </section>
+            
+            
+            <section>
+                <h2>Live Exercises</h2>
+                <p>
+                    This Javascript tutorial uses a <strong>live exercise</strong> approach which mean that you
+                    will face a lot of <strong>hands on code challenges</strong> right during the learning process.
+                </p>
+                
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox>
+                        <pre data-js>
+/*
+this exercise is just empty.
+you can run it but there is no exercise to solve.
+*/
+                        </pre>
+                    </div>
+                </div>
+                
+                <p>
+                    When you try to solve an exercise <strong>you can succeed or you can fail</strong>.
+                </p>
+                <p>
+                    These outcomes are highlighted by a <strong>green or red</strong> background:
+                </p>
+                
+                <div data-jsbox>
+                    <pre data-js>
+/*
+this exercise will always success,
+as long you don't write crapy code!
+*/
+                    </pre>
+                    <code data-test="true">this exercise will always succeed</code>
+                </div>
+                    
+                <div data-jsbox>
+                    <pre data-js>
+/*
+this exercise will always fail,
+it doesn't matter what code you write
+*/
+                    </pre>
+                    <code data-test="false">this exercise will always fail</code>
+                </div>
+                
+                <p>
+                    Sometimes you will try to write Javascript code... but you'll just write
+                    something that is not actually JS.
+                </p>
+                <p>
+                    I such cases the exercise box will try to run your code for a while but then
+                    she will ask you to do a good code review:
+                </p>
+                
+                <div data-jsbox>
+                    <pre data-js>this is just not Javascript!</pre>
+                </div>
+    
+            </section>
+            
+        </article>
+    </div>
+    
+    <!-- Javascript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
+    
+    <!-- JSBox -->
+    <link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
+    <script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
+</body>
+</html>
