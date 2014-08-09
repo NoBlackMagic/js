@@ -132,8 +132,14 @@ you can run it but there is no exercise to solve.
 */
                         </pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/fb-comments.min.js?thread=basic/environment/example"></script>
                 </div>
+                
+                <p>
+                    Every exercise is followed by a <strong>discussion thread</strong> where to add comments, opinions,
+                    ask for help or give help to other people:
+                </p>
+                
+                <script src="//noblackmagic.com/assets/js/fb-comments.min.js?thread=basic/environment/example"></script>
                 
                 <p>
                     When you try to solve an exercise <strong>you can succeed or you can fail</strong>.
@@ -142,24 +148,29 @@ you can run it but there is no exercise to solve.
                     These outcomes are highlighted by a <strong>green or red</strong> background:
                 </p>
                 
-                <div data-jsbox>
-                    <pre data-js>
-/*
-this exercise will always success,
-as long you don't write crapy code!
-*/
-                    </pre>
-                    <code data-test="true">this exercise will always succeed</code>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox>
+                        <pre data-js>
+    /*
+    this exercise will always success,
+    as long you don't write crapy code!
+    */
+                        </pre>
+                        <code data-test="true">this exercise will always succeed</code>
+                    </div>
                 </div>
-                
-                <div data-jsbox>
-                    <pre data-js>
-/*
-this exercise will always fail,
-it doesn't matter what code you write
-*/
-                    </pre>
-                    <code data-test="false">this exercise will always fail</code>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox>
+                        <pre data-js>
+    /*
+    this exercise will always fail,
+    it doesn't matter what code you write
+    */
+                        </pre>
+                        <code data-test="false">this exercise will always fail</code>
+                    </div>
                 </div>
                 
                 <p>
@@ -171,10 +182,48 @@ it doesn't matter what code you write
                     she will ask you to do a good code review:
                 </p>
                 
-                <div data-jsbox>
-                    <pre data-js>this is just not Javascript!</pre>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox>
+                        <pre data-js>this is just not Javascript!</pre>
+                    </div>
                 </div>
+                
+                <p>
+                    Starting from the next lesson on you will use that exercise to practice with
+                    the concept you learn.
+                </p>
+                <p>
+                    It will be a <strong>continuous practice approach</strong> which scope is to maximise the amount
+                    of things that you can learn.
+                </p>
+                <blockquote>
+                    <p>
+                        Remember to always <strong>try to reproduce all the code you learn</strong> and the exercises
+                        you solve <strong>as stand alone web pages</strong>.
+                    </p>
+                    <p>
+                        To <strong>practice with the browser's environment</strong> it's extremely important!
+                    </p>
+                </blockquote>
     
+            </section>
+            
+            <section class="go-tutorial clearfix">
+                <a class="next" href="../002-hello-world/" title="Javascript Hello World Tutorial">Hello World &raquo;</a>
+            </section>
+            
+            <section dlass="disqus-thread">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'js-spells';
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </section>
             
         </article>

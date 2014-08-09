@@ -1,3 +1,6 @@
+article section {
+    margin-bottom: 5em;
+}
 article p {
     margin-bottom: 1em;
 }
@@ -29,9 +32,9 @@ article .code-block pre {
     margin:0;
     padding:0;
 }
-article .jsbox-exercise,
-article section .jsbox-tpl-simple{
-    margin-bottom: 1em;
+article .jsbox-exercise {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 article .jsbox-exercise .jsbox-tpl-simple {
     border-top: none;
@@ -40,12 +43,28 @@ article .jsbox-exercise .jsbox-tpl-simple {
     border-bottom-left-radius: 4px !important;
 }
 
-.jsbox-disqus {
-    display: block;
-    width: 100%;
-    min-height: 70px;
+.fb-comments span {
+    margin-top: 1em;
     margin-bottom: 1em;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    overflow: hidden;
+}
+.fb-comments + p {
+    margin-top: 1em;
+}
+
+.go-tutorial {
+    padding: 1em 0.5em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+}
+.go-tutorial .next {
+    float:right;
+}
+.go-tutorial .prev {
+    float:left;
+}
+
+.disqus_thread {
+    padding: 4em 0;
+    border-top: 1px solid #ddd;
 }
