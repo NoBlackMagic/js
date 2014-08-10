@@ -9,6 +9,21 @@ article p strong {
     color: #555;
 }
 
+article blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 2em;
+    background: #fafafa;
+    text-shadow: 0 1px #fff;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+article blockquote p:last-child {
+    margin-bottom: 0;
+}
+
 article blockquote + p ,
 article .code-block + p
 {
