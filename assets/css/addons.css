@@ -68,3 +68,15 @@ article .jsbox-exercise .jsbox-tpl-simple {
     padding: 4em 0;
     border-top: 1px solid #ddd;
 }
+
+.jsbox-disqus {
+    display: block;
+    width: 100%;
+    min-height: 70px;
+    margin-top: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.jsbox-disqus + p {
+    margin-top: 1em;   
+}

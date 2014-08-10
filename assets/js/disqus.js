@@ -26,10 +26,9 @@
         options.id = options.id || 'disqus-' + options.thread.replace(/\//g, '_');
         options.url = options.url || document.location.href.split('#')[0] + options.id;
         
-        console.log(options.url);
-        
         document.write(
             '<iframe ' +
+            'src="' + options.url + '" ' +
             'id="' + options.id + '" ' +
             'class="' + options.class + '" ' +
             'style="' + options.style + '" ' +
@@ -43,6 +42,25 @@
         scope.disqusResize = function(w, h) {
             iframe.style.height = (h + h / 100 * 5) + 'px';
         };
+        
+        if (options.url.indexOf('localhost') !== -1) {
+            scope.document.open();
+            scope.document.write(
+                '<style>' +
+                'html, body {background:#fafafa}' +
+                '#disqus_thread {display:block;text-align:center;line-height:50px;font-family:sans-serif;text-shadow: 0 1px #fff;font-size:9pt}' +
+                '</style>' +
+                '<div id="disqus_thread">DISQUS is disabled while in localhost!</div>' +
+                '<script>' +
+                'var d = document.getElementById("disqus_thread");' +
+                'setInterval(function() {' + 
+                    'window.disqusResize(d.offsetWidth, d.offsetHeight);' +
+                '}, 500);' +
+                '</script>'
+            );
+            scope.document.close();
+            return;
+        }
         
         scope.document.open();
         scope.document.write(
