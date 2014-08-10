@@ -17,16 +17,21 @@ article blockquote {
     padding-right: 2em;
     background: #fafafa;
     text-shadow: 0 1px #fff;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
+    font-size: 0.9em;
 }
 article blockquote p:last-child {
     margin-bottom: 0;
 }
-
 article blockquote + p ,
 article .code-block + p
 {
+    margin-top: 1em;
+}
+article blockquote.inline {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.jsbox + blockquote.inline {
     margin-top: 1em;
 }
 
@@ -62,7 +67,8 @@ article .jsbox-exercise .jsbox-tpl-simple {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.fb-comments + p {
+.fb-comments + p,
+.jsbox + p {
     margin-top: 1em;
 }
 

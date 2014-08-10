@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Javascript Data Types: string, number, boolean, arrays, objects | JS Spells</title>
+
+    <link rel="stylesheet" type="text/css" href="//noblackmagic.com/assets/css/nobm.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/addons.css">
+    <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css">
+
+    <!--  Icons -->
+    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-32x32.png" sizes="32x32">
+    <!-- // Icon -->
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Google Analytics -->
+    <script src="//noblackmagic.com/assets/js/qs.min.js?v1"></script>
+    <script src="//noblackmagic.com/assets/js/ga.min.js?v1&ua=UA-52991368-2"></script>
+    
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <script src="//noblackmagic.com/assets/js/nobm.min.js?v1"></script>
+            <script src="//noblackmagic.com/assets/js/include.min.js?v1&url=/menu.html"></script>
+            <script src="//noblackmagic.com/assets/js/mchimp.min.js?v1"></script>
+            <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
+        </header>
+
+        <article>
+
+            <section class="start-block-article">
+                <h1>Data Types <small>JS Spells</small></h1>
+                <p>
+                    The basic building blocks of a programming language are <em>data types</em>.
+                </p>
+                <p>
+                    You do math operations with <strong>numbers</strong>, you can validate a mail addess <strong>string</strong>,
+                    you take decision with a <strong>true/false</strong> value.
+                </p>
+                <p>
+                    As <em>Javascript</em> is a <a href="http://en.wikipedia.org/wiki/Formal_language" target="_blank">formal language</a> 
+                    you need to master the syntax that you need to use to work with data types.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Strings</h2>
+                <p>
+                    Strings are the most used <em>data type</em> in a normal Javascript script.<br> 
+                    We use strings to show messages, and to retrieve some data input.
+                </p>
+                <p>
+                    A Javascript string is a list of characters, punctuation and numbers delimited by an apix like "<code>'</code>":
+                </p>
+                <pre><code>'this is a string';</code></pre>    
+                <p>
+                    the "<code>;</code>" character <strong>after</strong> the closing delimiter is an <strong>instruction delimiter</strong>
+                    and Javascript uses it to explicitly <strong>divide different instructions</strong>.
+                </p>
+                <blockquote class="inline">
+                    <p>
+                        In point of fact just to declare a string is a perfect instruction in Javascript so it is
+                        good practice to put the "<code>;</code>" at the end.
+                    </p>
+                </blockquote>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: create a string value!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1">
+                        <pre data-test="testNameAsString()">write your name as string</pre>
+                        <pre data-js></pre>
+                    </div>
+                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/strings/write-your-name"></script>
+                </div>
+                <p>
+                    The most common Javascript operation is <strong>string concatenation</strong> with which you can 
+                    <strong>join two or more strings</strong> to become one single data unit.
+                </p>
+                <pre><code>'hello' + ' ' + 'world';</code></pre>
+                <p>
+                    The code above creates 3 strings and uses the "<code>+</code>" <em>operator</em> to concatenate them.
+                </p>
+                <p>
+                    The outcome of such operation is:
+                </p>
+                <pre><code>'hello world'</code></pre>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: concatenate strings!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1">
+                        <pre data-test="testStringConcatenation()">write your <b>full name</b> as concatenation of your <code>name</code> and <code>surname</code> strings</pre>
+                        <pre data-js></pre>
+                    </div>
+                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/strings/concatenate-strings"></script>
+                </div>
+                <p>
+                    In Javascript <strong>a simple string value is more than just a string</strong>.<br>
+                    <small>
+                    She wraps a lot of useful methods to work with the string content doing operations like uppercase, get the 
+                    content's length, find and replace utilties and more.
+                    </small>
+                </p>
+                <div data-jsbox>
+                    <pre data-js>// try to run this code:
+console.log('JS Spells'.length);</pre>
+                </div>
+                <blockquote class="inline">
+                    <p>
+                        In the example above we use <code>console.log()</code> which is an extremely useful tool for 
+                        <strong>investigating what's going on</strong> within our code.
+                    </p>
+                </blockquote>
+                <p>
+                    Mozilla Developer Network (MDN) provides an exaustive documentations of the <em>String object</em>
+                    in Javascript:
+                </p>
+                <p>
+                    <small>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a>
+                    </small>
+                </p>
+                <p>
+                    Often you can just <strong>search for good documentation</strong> by prefixing your Google's queries with "MDN":
+                </p>
+                <blockquote class="inline">
+                    <p><small>google:</small> "MDN string uppercase"</p>
+                </blockquote>
+                <p>
+                    It's really likely that the first result it's a link to the correct page in MDN!
+                </p>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: uppercase your name!</h3>
+                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                        <pre data-artifact="artifactNameCapitalized()"></pre>
+                        <pre data-test="testNameCapitalized()">write your name as lowercase string <b>then uppercase</b> it</pre>
+                        <pre data-js></pre>
+                    </div>
+                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/strings/uppercase-your-name"></script>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Numbers</h2>
+                <p>work in progress</p>
+            </section>
+            
+            <section>
+                <h2>Boolean</h2>
+                <p>work in progress</p>
+            </section>
+            
+            <section>
+                <h2>Array</h2>
+                <p>work in progress</p>
+            </section>
+            
+            <section>
+                <h2>Objects</h2>
+                <p>work in progress</p>
+            </section>
+            
+            <section class="go-tutorial clearfix">
+                <a class="prev" href="../002-hello-world/" title="Javascript Hello World Tutorial">&laquo; Hello World</a>
+                <a class="next" href="../004-variables/" title="Javascript Variables Tutorial">Variables &raquo;</a>
+            </section>
+            
+        </article>
+        
+    </div>
+    
+    <!-- Javascript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
+    
+    <!-- JSBox -->
+    <link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
+    <script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
+</body>
+</html>
