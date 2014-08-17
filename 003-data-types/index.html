@@ -150,7 +150,49 @@ console.log('JS Spells'.length);</pre>
             
             <section>
                 <h2>Numbers</h2>
-                <p>work in progress</p>
+                <p>
+                    In Javascript you can use numbers and mathematical expressions to do whatever calculation:
+                </p>
+                <div data-jsbox><code>// simple operations:
+console.log('1 + 1', 1 + 1);
+console.log('2 * 2', 1 * 1);
+                
+// Take a google at "MDN Math"
+console.log('floor(4.66)', Math.floor(4.66));               
+console.log('round(4.66)', Math.round(4.66));
+</code></div>
+                <blockquote class="inline">
+                    <p>
+                        Even if you are yet to fully understand what an <code>object</code> and a <code>funtion</code> is you can try to made a good
+                        use of the <code>Math</code> library which provides a lot of extremely useful utilities!
+                    </p>
+                </blockquote>
+                
+                <p>
+                    Numbers in Javascript are coded as they are, <strong>without delimiters</strong>. 
+                    If a number has decimals then you use a single dot "<code>.</code>" as decimal delimiter.
+                </p>
+                <p>
+                    A number which has no decimal part is called <code>integer</code>, a number which has a decimal part is
+                    called a <code>float</code>:
+                </p>
+                <pre>123; // this is an INTEGER number
+123.456; // this is a FLOAT number
+               
+'123'; // this is not a number! this is a STRING!
+'123.456'; // this is not a number either! just another string!</pre>
+                
+<!--
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: sum two numbers!</h3>
+                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                        <pre data-test="testNameCapitalized()">use the mathemetical <b>sum operator</b> to produce the number <code>66</code>.</pre>
+                        <pre data-js></pre>
+                    </div>
+                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/number/sum"></script>
+                </div>
+-->
+                
             </section>
             
             <section>
