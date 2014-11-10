@@ -3,6 +3,7 @@ article section {
 }
 article p {
     margin-bottom: 1em;
+    color: #555;
 }
 
 article p strong {

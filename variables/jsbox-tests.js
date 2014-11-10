@@ -48,3 +48,32 @@ function testReadVariableContent() {
     return t1 && t2 && t3 && t4 && t5;
 }
 
+function artifactInvestigateVariableContent() {
+    window.name = 'Luke Skywalker';
+    window.age = 25;
+    window.__consoleLog = console.log;
+    window.__nameWasInvestigated = false;
+    window.__ageWasInvestigated = false;
+    console.log = function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.forEach(function(arg) {
+            if (arg === typeof window.name) window.__nameWasInvestigated = true;
+            if (arg === typeof window.age) window.__ageWasInvestigated = true;
+        });
+        
+        window.__consoleLog.apply(null, args);
+    };
+}
+
+function testInvestigateVariableContent() {
+    var t1 = jsbox.source.js.indexOf('console.log') === -1;
+    var t2 = jsbox.source.js.indexOf('typeof') === -1;
+    var t3 = window.__nameWasInvestigated && window.__ageWasInvestigated;
+    var t4 = (jsbox.source.js.match(/;/g) || []).length >= 2;
+    jsbox.hint('Test variables using <code>console.log</code>', t1);
+    jsbox.hint('You may need the <code>typeof</code> operator', !t1 && t2);
+    jsbox.hint('Did you tested the <code>name</code> variable?', !t1 && !t2 && !window.__nameWasInvestigated);
+    jsbox.hint('Did you tested the <code>age</code> variable?', !t1 && !t2 && !window.__ageWasInvestigated);
+    jsbox.hint('did you closed your instructions?<br>it seems you are missing some <code>;</code>!', t3 && !t4);
+    return t3;
+}
