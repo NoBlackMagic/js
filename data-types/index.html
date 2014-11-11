@@ -200,9 +200,92 @@ console.log('round(4.66)', Math.round(4.66));
                 <p>work in progress</p>
             </section>
             
-            <section>
-                <h2>Array</h2>
-                <p>work in progress</p>
+            <section id="arrays">
+                <h2>Arrays</h2>
+                <p>
+                    An array is a data structure that contains an <strong>ordered list of items</strong>.
+                </p>
+                <p>
+                    Each item is given an <em>index</em> which can be used to refer to the item itself later on. 
+                </p>
+                <p>
+                    Because an array is a list then we can read how many items are included
+                    using the <code>length</code> property.
+                </p>
+                <div data-jsbox data-autosize><code>// creating a new array:
+var colors = ['blue', 'red', 'green'];
+console.log('colors contains ' + colors.length + ' items');
+</code></div>
+                <blockquote class="inline">
+                    <p>
+                        Indexes starts from 0 (zero).<br>
+                        The index of the last item is alwasy <code>(arr.length - 1)</code>.
+                    </p>
+                </blockquote>
+                <p>
+                    It is possible to modify the content of arrays after their creation by adding and
+                    removing items.
+                </p>
+                <div data-jsbox data-autosize><code>var colors = ['blue', 'red', 'green'];
+console.log('original colors', colors);
+
+// add a new item at the end
+colors.push('yellow');
+console.log('after push', colors);
+
+// remove the first element
+colors.shift();
+console.log('after shift', colors);
+
+// add a new item at the beginning of the array
+colors.unshift('purple');
+console.log('after unshift', colors);
+
+// remove the second item
+colors.splice(1,1);
+console.log('after splice', colors);
+</code></div>
+            <p>
+                There are many other interesting stuff around arrays but so far the most important thing
+                that you need to keep in mind is that <strong>arrays are copied by reference</strong>.
+            </p>
+            <p>
+                When you try to create a copy of an array you just create a copy of it's reference, not the data
+                which is contained inside the array.
+            </p>
+            <div data-jsbox data-autosize><code>var colors = ['blue', 'red', 'green'];
+console.log('original colors', colors);
+
+// does it create a new array? No!
+var colors1 = colors;
+console.log('original colors1', colors1);
+
+// modifications on one array does affect the other
+colors.shift();
+colors1.pop();
+
+console.log('modified colors', colors);
+console.log('modified colors1', colors1);
+console.log('are colors and colors1 the same thing?', colors === colors1);
+</code></div>
+            <p>
+                If you really want to create a copy of an array you need a little tryck:
+            </p>
+            <div data-jsbox data-autosize><code>var colors = ['blue', 'red', 'green'];
+console.log('original colors', colors);
+
+// this is the way to create a copy of an array:
+var colors1 = Array.prototype.slice.call(colors);
+console.log('original colors1', colors1);
+
+// modifications on one array does affect the other
+colors.shift();
+colors1.pop();
+
+console.log('modified colors', colors);
+console.log('modified colors1', colors1);
+console.log('are colors and colors1 the same thing?', colors === colors1);
+</code></div>
             </section>
             
             <section>
