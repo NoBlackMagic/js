@@ -37,6 +37,16 @@ function testNameCapitalized() {
     return jsbox.spy.called;
 }
 
+function artifactArrayReverse() {
+    jsbox.spy = sinon.spy(Array.prototype, 'reverse');
+    jsbox.spy1 = sinon.spy(console, 'log');
+}
+
+function testArrayReverse() {
+    jsbox.hint('Have you tried to ask google for "<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank">MDN array reverse</a>"?', !jsbox.spy.called);    
+    jsbox.hint('Use <code>console.log</code> to debug the result!', jsbox.spy.called && !jsbox.spy1.called);
+    return jsbox.spy.called;
+}
 
 
 

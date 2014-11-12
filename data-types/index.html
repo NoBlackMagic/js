@@ -103,11 +103,11 @@
                     <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/string/concatenate"></script>
                 </div>
                 <p>
-                    In Javascript <strong>a simple string value is more than just a string</strong>.<br>
-                    <small>
-                    She wraps a lot of useful methods to work with the string content doing operations like uppercase, get the 
-                    content's length, find and replace utilties and more.
-                    </small>
+                    In Javascript <strong>a simple string is more than just a string</strong>.<br>
+                </p>
+                <p>
+                    A string is an <strong>object</strong> that have properties and methods. You can read the
+                    <code>length</code> of a string, find/replace sub parts of it, transform it the way you want.
                 </p>
                 <div data-jsbox>
                     <pre data-js>// try to run this code:
@@ -151,20 +151,20 @@ console.log('JS Spells'.length);</pre>
             <section>
                 <h2>Numbers</h2>
                 <p>
-                    In Javascript you can use numbers and mathematical expressions to do whatever calculation:
+                    In Javascript you can use numbers and mathematical expressions to do calculations:
                 </p>
                 <div data-jsbox><code>// simple operations:
-console.log('1 + 1', 1 + 1);
-console.log('2 * 2', 1 * 1);
+console.log('1 + 1 =', 1 + 1);
+console.log('2 * 2 =', 1 * 1);
                 
 // Take a google at "MDN Math"
-console.log('floor(4.66)', Math.floor(4.66));               
-console.log('round(4.66)', Math.round(4.66));
+console.log('floor of 4.66 =', Math.floor(4.66));               
+console.log('round of 4.66 =', Math.round(4.66));
 </code></div>
                 <blockquote class="inline">
                     <p>
-                        Even if you are yet to fully understand what an <code>object</code> and a <code>funtion</code> is you can try to made a good
-                        use of the <code>Math</code> library which provides a lot of extremely useful utilities!
+                        Even if you are yet to fully understand what an <code>object</code> and a <code>funtion</code> is you can 
+                        try to make a good use of the <code>Math</code> library which provides a lot of extremely useful utilities!
                     </p>
                 </blockquote>
                 
@@ -205,17 +205,24 @@ console.log('round(4.66)', Math.round(4.66));
                 <p>
                     An array is a data structure that contains an <strong>ordered list of items</strong>.
                 </p>
+                <div data-jsbox data-autosize><code>['blue', 'red', 'green'];</code></div>
                 <p>
-                    Each item is given an <em>index</em> which can be used to refer to the item itself later on. 
+                    Arrays are <em>objects</em> just like strings so you can use properties and methods
+                    to investigate or modify the content of an array:
                 </p>
+                <div data-jsbox data-autosize><code>console.log(['blue', 'red', 'green'].length);</code></div>
                 <p>
-                    Because an array is a list then we can read how many items are included
-                    using the <code>length</code> property.
+                    Each item of an array is given an <em>index</em> which can be used to refer 
+                    to the item itself later on. 
                 </p>
-                <div data-jsbox data-autosize><code>// creating a new array:
-var colors = ['blue', 'red', 'green'];
-console.log('colors contains ' + colors.length + ' items');
-</code></div>
+<pre><code>// array in javascript
+['blue', 'red', 'green']
+
+// how indexes ar assigned
+[0] => 'blue'
+[1] => 'red'
+[2] => 'green'
+</code></pre>
                 <blockquote class="inline">
                     <p>
                         Indexes starts from 0 (zero).<br>
@@ -223,69 +230,26 @@ console.log('colors contains ' + colors.length + ' items');
                     </p>
                 </blockquote>
                 <p>
-                    It is possible to modify the content of arrays after their creation by adding and
-                    removing items.
+                    Each array item can contain every data types, numbers, strings, etc.
                 </p>
-                <div data-jsbox data-autosize><code>var colors = ['blue', 'red', 'green'];
-console.log('original colors', colors);
-
-// add a new item at the end
-colors.push('yellow');
-console.log('after push', colors);
-
-// remove the first element
-colors.shift();
-console.log('after shift', colors);
-
-// add a new item at the beginning of the array
-colors.unshift('purple');
-console.log('after unshift', colors);
-
-// remove the second item
-colors.splice(1,1);
-console.log('after splice', colors);
-</code></div>
-            <p>
-                There are many other interesting stuff around arrays but so far the most important thing
-                that you need to keep in mind is that <strong>arrays are copied by reference</strong>.
-            </p>
-            <p>
-                When you try to create a copy of an array you just create a copy of it's reference, not the data
-                which is contained inside the array.
-            </p>
-            <div data-jsbox data-autosize><code>var colors = ['blue', 'red', 'green'];
-console.log('original colors', colors);
-
-// does it create a new array? No!
-var colors1 = colors;
-console.log('original colors1', colors1);
-
-// modifications on one array does affect the other
-colors.shift();
-colors1.pop();
-
-console.log('modified colors', colors);
-console.log('modified colors1', colors1);
-console.log('are colors and colors1 the same thing?', colors === colors1);
-</code></div>
-            <p>
-                If you really want to create a copy of an array you need a little tryck:
-            </p>
-            <div data-jsbox data-autosize><code>var colors = ['blue', 'red', 'green'];
-console.log('original colors', colors);
-
-// this is the way to create a copy of an array:
-var colors1 = Array.prototype.slice.call(colors);
-console.log('original colors1', colors1);
-
-// modifications on one array does affect the other
-colors.shift();
-colors1.pop();
-
-console.log('modified colors', colors);
-console.log('modified colors1', colors1);
-console.log('are colors and colors1 the same thing?', colors === colors1);
-</code></div>
+                <p>
+                    Mozilla Developer Network (MDN) provides an exaustive documentations of the <em>Array object</em>
+                    in Javascript:
+                </p>
+                <p>
+                    <small>
+                    <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+                    </small>
+                </p>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Do It Yourself!</h3>
+                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                        <pre data-artifact="artifactArrayReverse()"></pre>
+                        <pre data-test="testArrayReverse()">given an array of numbers, reverse it!</small></pre>
+                        <pre data-js>var nums = [1,2,3,4,5];</pre>
+                    </div>
+                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/arrays/natural-numbers"></script>
+                </div>
             </section>
             
             <section>
