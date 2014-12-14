@@ -5,7 +5,7 @@ cd deploy
 
 # clone a new version of the repository
 git clone git@github.com:NoBlackMagic/js-spells.git
-cd noblackmagic.github.io
+cd js-spells
 git checkout wks
 
 # build the product
