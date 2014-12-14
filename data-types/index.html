@@ -2,38 +2,104 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
     <title>Javascript Data Types: string, number, boolean, arrays, objects | JS Spells</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" href="//noblackmagic.com/assets/css/nobm.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/addons.css">
-    <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css">
 
-    <!--  Icons -->
-    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-32x32.png" sizes="32x32">
-    <!-- // Icon -->
+
+<!--  Icons -->
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+
+<!-- iOS 7 iPad (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
+<!-- iOS 6 iPad (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+<!-- iOS 7 iPhone (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon">
+<!-- iOS 6 iPhone (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+<!-- iOS 7 iPad -->
+<link href="/assets/images/icons/apple-touch-icon-76x76.png" sizes="76x76" rel="apple-touch-icon">
+<!-- iOS 6 iPad -->
+<link href="/assets/images/icons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+<!-- iOS 6 iPhone -->
+<link href="/assets/images/icons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+<!-- // Icon -->
     
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- Google Analytics -->
-    <script src="//noblackmagic.com/assets/js/qs.min.js?v1"></script>
-    <script src="//noblackmagic.com/assets/js/ga.min.js?v1&ua=UA-52991368-2"></script>
     
+    <script>
+(function(ua) {
+    // skip analytics during local development
+    if (!ua.length || document.location.href.indexOf("localhost:") !== -1) return;
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', ua, 'auto');
+    ga('send', 'pageview');
+})('UA-52991368-2' || '');
+</script>
+    
+    <link rel="stylesheet" href="/assets/index.css" id="wks">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
     <div class="wrapper">
         <header>
-            <script src="//noblackmagic.com/assets/js/nobm.min.js?v1"></script>
-            <script src="//noblackmagic.com/assets/js/include.min.js?v1&url=/menu.html"></script>
-            <script src="//noblackmagic.com/assets/js/mchimp.min.js?v1"></script>
+            <a href="http://noblackmagic.com" title="web dev training: javascript, css, html5 tutorials and exercises" id="header-block" class="clearfix">
+    <img id="logo" class="left" alt="NoBlackMagic.com Logo" width="75" src="/assets/images/logo.png">
+    <div id="title-block" class="left">
+        <h1>NoBlackMagic.com</h1>
+        <p>no evil spells required!</p>
+    </div>
+</a>
+            
+<h3>
+    <a href="/" title="javascript basic building blocks: variables, conditionals, functions, arrays, objects">
+        &#xAB; JS Spells <span style="font-size:0.9em">- Index</span>
+    </a>
+</h3>
+<hr>
+<ul>
+    <li>&#xBB; 
+        <a href="/environment/" title="javascript environment">
+        The Environment 
+    </a></li>
+    <li>&#xBB; 
+        <a href="/hello-world/" title="javascript hello world">
+        Hello World 
+    </a></li>
+    <li>&#xBB;
+        <a href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">Data Types
+    </a></li>
+    <li>&#xBB; 
+        <a href="/variables/" title="javascript variables tutorial">
+        Variables 
+    </a></li>
+    <li>&#xBB; Conditionals</li>
+</ul>
+
+            
+<div id="mc_embed_signup" style="">
+    <form action="http://noblackmagic.us1.list-manage.com/subscribe/post?u=c0e8c260bf69b2d7c5238d3b0&amp;id=cd2f53a5ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <label for="mce-EMAIL">Keep in touch with us!</label>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#39c; border:#39c; font-size:.9em;font-weight:normal">
+        <div style="position: absolute; left: -5000px;">
+            <input type="text" name="b_c0e8c260bf69b2d7c5238d3b0_cd2f53a5ca" tabindex="-1" value="">
+        </div>
+    </form>
+</div>
             <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
         </header>
 
@@ -61,46 +127,44 @@
                     We use strings to show messages, and to retrieve some data input.
                 </p>
                 <p>
-                    A Javascript string is a list of characters, punctuation and numbers delimited by an apix like "<code>'</code>":
+                    A Javascript string is a list of characters, punctuation and numbers delimited by an apix like &quot;<code>&apos;</code>&quot;:
                 </p>
-                <pre><code>'this is a string';</code></pre>    
+                <pre><code>&apos;this is a string&apos;;</code></pre>    
                 <p>
-                    the "<code>;</code>" character <strong>after</strong> the closing delimiter is an <strong>instruction delimiter</strong>
+                    the &quot;<code>;</code>&quot; character <strong>after</strong> the closing delimiter is an <strong>instruction delimiter</strong>
                     and Javascript uses it to explicitly <strong>divide different instructions</strong>.
                 </p>
                 <blockquote class="inline">
                     <p>
                         In point of fact just to declare a string is a perfect instruction in Javascript so it is
-                        good practice to put the "<code>;</code>" at the end.
+                        good practice to put the &quot;<code>;</code>&quot; at the end.
                     </p>
                 </blockquote>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Exercise: create a string value!</h3>
-                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1">
+                    <div data-jsbox="" data-jsbox-scripts="jsbox-tests.js?v1">
                         <pre data-test="testNameAsString()">write your name as string</pre>
-                        <pre data-js></pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/string/write-name"></script>
                 </div>
                 <p>
                     The most common Javascript operation is <strong>string concatenation</strong> with which you can 
                     <strong>join two or more strings</strong> to become one single data unit.
                 </p>
-                <pre><code>'hello' + ' ' + 'world';</code></pre>
+                <pre><code>&apos;hello&apos; + &apos; &apos; + &apos;world&apos;;</code></pre>
                 <p>
-                    The code above creates 3 strings and uses the "<code>+</code>" <em>operator</em> to concatenate them.
+                    The code above creates 3 strings and uses the &quot;<code>+</code>&quot; <em>operator</em> to concatenate them.
                 </p>
                 <p>
                     The outcome of such operation is:
                 </p>
-                <pre><code>'hello world'</code></pre>
+                <pre><code>&apos;hello world&apos;</code></pre>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Exercise: concatenate strings!</h3>
-                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1">
+                    <div data-jsbox="" data-jsbox-scripts="jsbox-tests.js?v1">
                         <pre data-test="testStringConcatenation()">write your <b>full name</b> as concatenation of your <code>name</code> and <code>surname</code> strings</pre>
-                        <pre data-js></pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/string/concatenate"></script>
                 </div>
                 <p>
                     In Javascript <strong>a simple string is more than just a string</strong>.<br>
@@ -109,14 +173,14 @@
                     A string is an <strong>object</strong> that have properties and methods. You can read the
                     <code>length</code> of a string, find/replace sub parts of it, transform it the way you want.
                 </p>
-                <div data-jsbox>
-                    <pre data-js>// try to run this code:
-console.log('JS Spells'.length);</pre>
+                <div data-jsbox="">
+                    <pre data-js="">// try to run this code:
+console.log(&apos;JS Spells&apos;.length);</pre>
                 </div>
                 <blockquote class="inline">
                     <p>
                         In the example above we use <code>console.log()</code> which is an extremely useful tool for 
-                        <strong>investigating what's going on</strong> within our code.
+                        <strong>investigating what&apos;s going on</strong> within our code.
                     </p>
                 </blockquote>
                 <p>
@@ -129,22 +193,21 @@ console.log('JS Spells'.length);</pre>
                     </small>
                 </p>
                 <p>
-                    Often you can just <strong>search for good documentation</strong> by prefixing your Google's queries with "MDN":
+                    Often you can just <strong>search for good documentation</strong> by prefixing your Google&apos;s queries with &quot;MDN&quot;:
                 </p>
                 <blockquote class="inline">
-                    <p><small>google:</small> "MDN string uppercase"</p>
+                    <p><small>google:</small> &quot;MDN string uppercase&quot;</p>
                 </blockquote>
                 <p>
-                    It's really likely that the first result it's a link to the correct page in MDN!
+                    It&apos;s really likely that the first result it&apos;s a link to the correct page in MDN!
                 </p>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Exercise: uppercase your name!</h3>
-                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                    <div data-jsbox="" data-jsbox-scripts="sinon,jsbox-tests.js?v1">
                         <pre data-artifact="artifactNameCapitalized()"></pre>
                         <pre data-test="testNameCapitalized()">write your name as lowercase string <b>then uppercase</b> it</pre>
-                        <pre data-js></pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/string/uppercase"></script>
                 </div>
             </section>
             
@@ -153,13 +216,13 @@ console.log('JS Spells'.length);</pre>
                 <p>
                     In Javascript you can use numbers and mathematical expressions to do calculations:
                 </p>
-                <div data-jsbox><code>// simple operations:
-console.log('1 + 1 =', 1 + 1);
-console.log('2 * 2 =', 1 * 1);
+                <div data-jsbox=""><code>// simple operations:
+console.log(&apos;1 + 1 =&apos;, 1 + 1);
+console.log(&apos;2 * 2 =&apos;, 1 * 1);
                 
-// Take a google at "MDN Math"
-console.log('floor of 4.66 =', Math.floor(4.66));               
-console.log('round of 4.66 =', Math.round(4.66));
+// Take a google at &quot;MDN Math&quot;
+console.log(&apos;floor of 4.66 =&apos;, Math.floor(4.66));               
+console.log(&apos;round of 4.66 =&apos;, Math.round(4.66));
 </code></div>
                 <blockquote class="inline">
                     <p>
@@ -170,7 +233,7 @@ console.log('round of 4.66 =', Math.round(4.66));
                 
                 <p>
                     Numbers in Javascript are coded as they are, <strong>without delimiters</strong>. 
-                    If a number has decimals then you use a single dot "<code>.</code>" as decimal delimiter.
+                    If a number has decimals then you use a single dot &quot;<code>.</code>&quot; as decimal delimiter.
                 </p>
                 <p>
                     A number which has no decimal part is called <code>integer</code>, a number which has a decimal part is
@@ -179,8 +242,8 @@ console.log('round of 4.66 =', Math.round(4.66));
                 <pre>123; // this is an INTEGER number
 123.456; // this is a FLOAT number
                
-'123'; // this is not a number! this is a STRING!
-'123.456'; // this is not a number either! just another string!</pre>
+&apos;123&apos;; // this is not a number! this is a STRING!
+&apos;123.456&apos;; // this is not a number either! just another string!</pre>
                 
 <!--
                 <div class="jsbox-exercise">
@@ -205,23 +268,23 @@ console.log('round of 4.66 =', Math.round(4.66));
                 <p>
                     An array is a data structure that contains an <strong>ordered list of items</strong>.
                 </p>
-                <div data-jsbox data-autosize><code>['blue', 'red', 'green'];</code></div>
+                <div data-jsbox="" data-autosize=""><code>[&apos;blue&apos;, &apos;red&apos;, &apos;green&apos;];</code></div>
                 <p>
                     Arrays are <em>objects</em> just like strings so you can use properties and methods
                     to investigate or modify the content of an array:
                 </p>
-                <div data-jsbox data-autosize><code>console.log(['blue', 'red', 'green'].length);</code></div>
+                <div data-jsbox="" data-autosize=""><code>console.log([&apos;blue&apos;, &apos;red&apos;, &apos;green&apos;].length);</code></div>
                 <p>
                     Each item of an array is given an <em>index</em> which can be used to refer 
                     to the item itself later on. 
                 </p>
 <pre><code>// array in javascript
-['blue', 'red', 'green']
+[&apos;blue&apos;, &apos;red&apos;, &apos;green&apos;]
 
 // how indexes ar assigned
-[0] => 'blue'
-[1] => 'red'
-[2] => 'green'
+[0] =&gt; &apos;blue&apos;
+[1] =&gt; &apos;red&apos;
+[2] =&gt; &apos;green&apos;
 </code></pre>
                 <blockquote class="inline">
                     <p>
@@ -243,12 +306,11 @@ console.log('round of 4.66 =', Math.round(4.66));
                 </p>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Do It Yourself!</h3>
-                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                    <div data-jsbox="" data-jsbox-scripts="sinon,jsbox-tests.js?v1">
                         <pre data-artifact="artifactArrayReverse()"></pre>
-                        <pre data-test="testArrayReverse()">given an array of numbers, reverse it!</small></pre>
-                        <pre data-js>var nums = [1,2,3,4,5];</pre>
+                        <pre data-test="testArrayReverse()">given an array of numbers, reverse it!</pre>
+                        <pre data-js="">var nums = [1,2,3,4,5];</pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/arrays/natural-numbers"></script>
                 </div>
             </section>
             
@@ -258,8 +320,8 @@ console.log('round of 4.66 =', Math.round(4.66));
             </section>
             
             <section class="go-tutorial clearfix">
-                <a class="prev" href="/hello-world/" title="javascript hello world">&laquo; Hello World</a>
-                <a class="next" href="/variables/" title="javascript variables tutorial">Variables &raquo;</a>
+                <a class="prev" href="/hello-world/" title="javascript hello world">&#xAB; Hello World</a>
+                <a class="next" href="/variables/" title="javascript variables tutorial">Variables &#xBB;</a>
             </section>
             
         </article>
@@ -267,12 +329,12 @@ console.log('round of 4.66 =', Math.round(4.66));
     </div>
     
     <!-- Javascript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
-    
-    <!-- JSBox -->
-    <link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
-    <script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
+
+<!-- JSBox -->
+<link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
+<script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
 </body>
 </html>

@@ -2,38 +2,104 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
     <title>Hello World | JS Spells - BASIC |your first Javascript snippet</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" href="//noblackmagic.com/assets/css/nobm.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/addons.css">
-    <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css">
 
-    <!--  Icons -->
-    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-32x32.png" sizes="32x32">
-    <!-- // Icon -->
+
+<!--  Icons -->
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+
+<!-- iOS 7 iPad (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
+<!-- iOS 6 iPad (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+<!-- iOS 7 iPhone (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon">
+<!-- iOS 6 iPhone (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+<!-- iOS 7 iPad -->
+<link href="/assets/images/icons/apple-touch-icon-76x76.png" sizes="76x76" rel="apple-touch-icon">
+<!-- iOS 6 iPad -->
+<link href="/assets/images/icons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+<!-- iOS 6 iPhone -->
+<link href="/assets/images/icons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+<!-- // Icon -->
     
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- Google Analytics -->
-    <script src="//noblackmagic.com/assets/js/qs.min.js?v1"></script>
-    <script src="//noblackmagic.com/assets/js/ga.min.js?v1&ua=UA-52991368-2"></script>
     
+    <script>
+(function(ua) {
+    // skip analytics during local development
+    if (!ua.length || document.location.href.indexOf("localhost:") !== -1) return;
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', ua, 'auto');
+    ga('send', 'pageview');
+})('UA-52991368-2' || '');
+</script>
+    
+    <link rel="stylesheet" href="/assets/index.css" id="wks">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
     <div class="wrapper">
         <header>
-            <script src="//noblackmagic.com/assets/js/nobm.min.js?v1"></script>
-            <script src="//noblackmagic.com/assets/js/include.min.js?v1&url=/menu.html"></script>
-            <script src="//noblackmagic.com/assets/js/mchimp.min.js?v1"></script>
+            <a href="http://noblackmagic.com" title="web dev training: javascript, css, html5 tutorials and exercises" id="header-block" class="clearfix">
+    <img id="logo" class="left" alt="NoBlackMagic.com Logo" width="75" src="/assets/images/logo.png">
+    <div id="title-block" class="left">
+        <h1>NoBlackMagic.com</h1>
+        <p>no evil spells required!</p>
+    </div>
+</a>
+            
+<h3>
+    <a href="/" title="javascript basic building blocks: variables, conditionals, functions, arrays, objects">
+        &#xAB; JS Spells <span style="font-size:0.9em">- Index</span>
+    </a>
+</h3>
+<hr>
+<ul>
+    <li>&#xBB; 
+        <a href="/environment/" title="javascript environment">
+        The Environment 
+    </a></li>
+    <li>&#xBB; 
+        <a href="/hello-world/" title="javascript hello world">
+        Hello World 
+    </a></li>
+    <li>&#xBB;
+        <a href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">Data Types
+    </a></li>
+    <li>&#xBB; 
+        <a href="/variables/" title="javascript variables tutorial">
+        Variables 
+    </a></li>
+    <li>&#xBB; Conditionals</li>
+</ul>
+
+            
+<div id="mc_embed_signup" style="">
+    <form action="http://noblackmagic.us1.list-manage.com/subscribe/post?u=c0e8c260bf69b2d7c5238d3b0&amp;id=cd2f53a5ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <label for="mce-EMAIL">Keep in touch with us!</label>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#39c; border:#39c; font-size:.9em;font-weight:normal">
+        <div style="position: absolute; left: -5000px;">
+            <input type="text" name="b_c0e8c260bf69b2d7c5238d3b0_cd2f53a5ca" tabindex="-1" value="">
+        </div>
+    </form>
+</div>
             <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
         </header>
 
@@ -46,7 +112,7 @@
                     you are going to write your real first Javascript code snippet.
                 </p>
                 <p>
-                    As we dont't want to reinvent the wheel <strong>the first lesson you must learn is</strong> quick and simple:
+                    As we dont&apos;t want to reinvent the wheel <strong>the first lesson you must learn is</strong> quick and simple:
                 </p>
                 <blockquote>
                     <p>
@@ -56,16 +122,16 @@
                     </p>
                 </blockquote>
                 <p>
-                    Don't try to memorise every Javascript instruction or every little piece of code. 
-                    It's not worth to.
+                    Don&apos;t try to memorise every Javascript instruction or every little piece of code. 
+                    It&apos;s not worth to.
                 </p>
                 <p>
                     Instead <strong>learn and practice how to ask the right question</strong> to the search engine which
-                    is the developer's best friend!
+                    is the developer&apos;s best friend!
                 </p>
                 <blockquote>
                     <p>
-                        Use the "javascript" or <strong>"js" prefix</strong> to all you Google queries.
+                        Use the &quot;javascript&quot; or <strong>&quot;js&quot; prefix</strong> to all you Google queries.
                     </p>
                 </blockquote>
                 <p>
@@ -77,12 +143,11 @@
                 
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Do It Yourself!</h3>
-                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js">
+                    <div data-jsbox="" data-jsbox-scripts="sinon,jsbox-tests.js" data-autosize="">
                         <pre data-artifact="artifactHelloWorld()"></pre>
-                        <pre data-test="testHelloWorld()">alert the "Hello World" string</pre>
-                        <pre data-js></pre>
+                        <pre data-test="testHelloWorld()">alert the &quot;Hello World&quot; string</pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=hello-world/alert"></script>
                 </div>
             </section>
             
@@ -90,12 +155,12 @@
             <section>
                 <h2>About Programming</h2>
                 <p>
-                    Now that you solved your first programming exercise it's about time to talk on the difference that
-                    exists between "write code" and "code a solution".
+                    Now that you solved your first programming exercise it&apos;s about time to talk on the difference that
+                    exists between &quot;write code&quot; and &quot;code a solution&quot;.
                 </p>
                 <blockquote>
                     <p style="text-align:center">
-                        to develop &nbsp;&nbsp;&nbsp; <strong>IS NOT</strong> &nbsp;&nbsp;&nbsp; to write code
+                        to develop &#xA0;&#xA0;&#xA0; <strong>IS NOT</strong> &#xA0;&#xA0;&#xA0; to write code
                     </p>
                 </blockquote>
                 <p>
@@ -109,8 +174,8 @@
             </section>
             
             <section class="go-tutorial clearfix">
-                <a class="prev" href="/environment/" title="javascript environment">&laquo; Hello World</a>
-                <a class="next" href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">Data Types &raquo;</a>
+                <a class="prev" href="/environment/" title="javascript environment">&#xAB; The Environment</a>
+                <a class="next" href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">Data Types &#xBB;</a>
             </section>
 
         </article>
@@ -118,12 +183,12 @@
     </div>
     
     <!-- Javascript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
-    
-    <!-- JSBox -->
-    <link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
-    <script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
+
+<!-- JSBox -->
+<link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
+<script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
 </body>
 </html>

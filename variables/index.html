@@ -2,39 +2,104 @@
 <html>
 
 <head>
+    <title>Variables | JS Spells - BASIC |&#xA0;expressions, variables, conditionals, functions, arrays, objects, loops</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Variables | JS Spells - BASIC | expressions, variables, conditionals, functions, arrays, objects, loops</title>
 
-    <link rel="stylesheet" type="text/css" href="//noblackmagic.com/assets/css/nobm.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/addons.css">
-    <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css">
 
-    <!--  Icons -->
-    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="//noblackmagic.com/assets/images/icons/favicon-32x32.png" sizes="32x32">
-    <!-- // Icon -->
+<!--  Icons -->
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+
+<!-- iOS 7 iPad (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
+<!-- iOS 6 iPad (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+<!-- iOS 7 iPhone (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon">
+<!-- iOS 6 iPhone (retina) -->
+<link href="/assets/images/icons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+<!-- iOS 7 iPad -->
+<link href="/assets/images/icons/apple-touch-icon-76x76.png" sizes="76x76" rel="apple-touch-icon">
+<!-- iOS 6 iPad -->
+<link href="/assets/images/icons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+<!-- iOS 6 iPhone -->
+<link href="/assets/images/icons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+<!-- // Icon -->
     
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- Google Analytics -->
-    <script src="//noblackmagic.com/assets/js/qs.min.js?v1"></script>
-    <script src="//noblackmagic.com/assets/js/ga.min.js?v1&ua=UA-52991368-2"></script>
     
+    <script>
+(function(ua) {
+    // skip analytics during local development
+    if (!ua.length || document.location.href.indexOf("localhost:") !== -1) return;
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', ua, 'auto');
+    ga('send', 'pageview');
+})('UA-52991368-2' || '');
+</script>
+    
+    <link rel="stylesheet" href="/assets/index.css" id="wks">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    
 
     <div class="wrapper">
         <header>
-            <script src="//noblackmagic.com/assets/js/nobm.min.js?v1"></script>
-            <script src="//noblackmagic.com/assets/js/include.min.js?v1&url=/menu.html"></script>
-            <script src="//noblackmagic.com/assets/js/mchimp.min.js?v1"></script>
+            <a href="http://noblackmagic.com" title="web dev training: javascript, css, html5 tutorials and exercises" id="header-block" class="clearfix">
+    <img id="logo" class="left" alt="NoBlackMagic.com Logo" width="75" src="/assets/images/logo.png">
+    <div id="title-block" class="left">
+        <h1>NoBlackMagic.com</h1>
+        <p>no evil spells required!</p>
+    </div>
+</a>
+            
+<h3>
+    <a href="/" title="javascript basic building blocks: variables, conditionals, functions, arrays, objects">
+        &#xAB; JS Spells <span style="font-size:0.9em">- Index</span>
+    </a>
+</h3>
+<hr>
+<ul>
+    <li>&#xBB; 
+        <a href="/environment/" title="javascript environment">
+        The Environment 
+    </a></li>
+    <li>&#xBB; 
+        <a href="/hello-world/" title="javascript hello world">
+        Hello World 
+    </a></li>
+    <li>&#xBB;
+        <a href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">Data Types
+    </a></li>
+    <li>&#xBB; 
+        <a href="/variables/" title="javascript variables tutorial">
+        Variables 
+    </a></li>
+    <li>&#xBB; Conditionals</li>
+</ul>
+
+            
+<div id="mc_embed_signup" style="">
+    <form action="http://noblackmagic.us1.list-manage.com/subscribe/post?u=c0e8c260bf69b2d7c5238d3b0&amp;id=cd2f53a5ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <label for="mce-EMAIL">Keep in touch with us!</label>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#39c; border:#39c; font-size:.9em;font-weight:normal">
+        <div style="position: absolute; left: -5000px;">
+            <input type="text" name="b_c0e8c260bf69b2d7c5238d3b0_cd2f53a5ca" tabindex="-1" value="">
+        </div>
+    </form>
+</div>
             <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
         </header>
 
@@ -51,7 +116,7 @@
                     You can think to a variable as <strong>a box with a label</strong>. 
                 </p>
                 <p>
-                    It doesn't really matter what you put inside that box, the important part is that 
+                    It doesn&apos;t really matter what you put inside that box, the important part is that 
                     <strong>you can refer to the box content using its label</strong>.
                 </p>
             </section>
@@ -66,15 +131,14 @@
                 <p>
                     This is a complete and valid instruction which means:
                 </p>
-                <pre>&raquo; make a box and apply the label "name" on it</pre>
+                <pre>&#xBB; make a box and apply the label &quot;name&quot; on it</pre>
                 
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Do It Yourself!</h3>
-                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1" data-autosize>
-                        <pre data-test="testToCreateVariable()">create a variable named "surname"</pre>
-                        <pre data-js></pre>
+                    <div data-jsbox="" data-jsbox-scripts="jsbox-tests.js?v1" data-autosize="">
+                        <pre data-test="testToCreateVariable()">create a variable named &quot;surname&quot;</pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=variables/create"></script>
                 </div>
             </section>
             
@@ -88,37 +152,36 @@
                     The simplest way to do it is when you create the new variable:
                 </p>
                 <p>
-                    <pre>var name = 'Luke Skywalker';</pre>
+                    <pre>var name = &apos;Luke Skywalker&apos;;</pre>
                 </p>
                 <p>
                     But you can also use existing variables and change their contents on the fly:
                 </p>
-                <pre>name = 'Darth Vader';</pre>
+                <pre>name = &apos;Darth Vader&apos;;</pre>
                 <p>
                     <small>
                         <b>NOTE:</b> if you have already created the variable then is an error to 
-                        use the <code>var</code> operator again! It's like destroying the box and then
+                        use the <code>var</code> operator again! It&apos;s like destroying the box and then
                         create a new one with the same lable!
                     </small>
                 </p>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Do It Yourself!</h3>
-                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1" data-autosize>
-                        <pre data-artifact>var name = 'Luke Skywalker';</pre>
-                        <pre data-test="testToAssignContentsToVariables()">variable <code>name</code> <b>already exists</b> and contains "Luke Skywalker", turn it to the dark side of the Force by assigning "Darth Vader" to the variable <code>name</code>.<br><br>hint &raquo; try to run <code>console.log(name)</code> to investigate the current value of <code>name</code>.</pre>
-                        <pre data-js></pre>
+                    <div data-jsbox="" data-jsbox-scripts="jsbox-tests.js?v1" data-autosize="">
+                        <pre data-artifact="">var name = &apos;Luke Skywalker&apos;;</pre>
+                        <pre data-test="testToAssignContentsToVariables()">variable <code>name</code> <b>already exists</b> and contains &quot;Luke Skywalker&quot;, turn it to the dark side of the Force by assigning &quot;Darth Vader&quot; to the variable <code>name</code>.<br><br>hint &#xBB; try to run <code>console.log(name)</code> to investigate the current value of <code>name</code>.</pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=variables/write"></script>
                 </div>
             </section>
             
             <section>
                 <h2>Reading contents fro a variable</h2>
                 <p>
-                    When a variable exists you can access it's content by just using the <strong>variable name</strong>:
+                    When a variable exists you can access it&apos;s content by just using the <strong>variable name</strong>:
                 </p>
-                <pre>var name = 'Luke Skywalker';
-console.log(name); // -> Luke Skywalker</pre>
+                <pre>var name = &apos;Luke Skywalker&apos;;
+console.log(name); // -&gt; Luke Skywalker</pre>
                 <p>
                    When it comes to read variable it is more likely that you want to perform some <strong>operations
                    within variables</strong> and - maybe - save the result in a brand new one:
@@ -138,18 +201,17 @@ var result = num1 + num2;</pre>
                     <li>create a new variable <code>result</code></li>
                     <li>read <code>num1</code></li>
                     <li>read <code>num2</code></li>
-                    <li>sum <code>num1</code>'s value with <code>num2</code>'s value</li>
+                    <li>sum <code>num1</code>&apos;s value with <code>num2</code>&apos;s value</li>
                     <li>assign the result of the previous expression to <code>result</code></li>
                 </ol>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Do It Yourself!</h3>
-                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1" data-autosize>
-                        <pre data-test="testReadVariableContent()">complete the existing code in order to <strong>create</strong> a <code>fullName</code> variable which should contains "Luke Skywalker"</pre>
-                        <pre data-js>var name = 'Luke';
-var surname = 'Skywalker';</pre>
+                    <div data-jsbox="" data-jsbox-scripts="jsbox-tests.js?v1" data-autosize="">
+                        <pre data-test="testReadVariableContent()">complete the existing code in order to <strong>create</strong> a <code>fullName</code> variable which should contains &quot;Luke Skywalker&quot;</pre>
+                        <pre data-js="">var name = &apos;Luke&apos;;
+var surname = &apos;Skywalker&apos;;</pre>
 
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=variables/read"></script>
                 </div>
             </section>
             
@@ -167,26 +229,25 @@ var surname = 'Skywalker';</pre>
                     <b>Scenario:</b> you need to sum 2 variables but you want to be sure that thei contains
                     real numbers:
                 </p>
-                <pre>var a = '1';
-console.log(typeof a); // -> string
+                <pre>var a = &apos;1&apos;;
+console.log(typeof a); // -&gt; string
 
 var b = 1;
-console.log(typeof b); // -> number
+console.log(typeof b); // -&gt; number
 </pre>
                 <div class="jsbox-exercise">
                     <h3 class="title-code-block">Do It Yourself!</h3>
-                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1,chai,sinon" data-autosize>
+                    <div data-jsbox="" data-jsbox-scripts="jsbox-tests.js?v1,chai,sinon" data-autosize="">
                         <pre data-artifact="artifactInvestigateVariableContent()"></pre>
-                        <pre data-test="testInvestigateVariableContent()">this box define the variable "name" and "age", investigate their types using <code>console.log</code>!</pre>
-                        <pre data-js></pre>
+                        <pre data-test="testInvestigateVariableContent()">this box define the variable &quot;name&quot; and &quot;age&quot;, investigate their types using <code>console.log</code>!</pre>
+                        <pre data-js=""></pre>
                     </div>
-                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=variables/typeof"></script>
                 </div>
                 
             </section>
             
             <section class="go-tutorial clearfix">
-                <a class="prev" href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">&laquo; Data Types</a>
+                <a class="prev" href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">&#xAB; Data Types</a>
 <!--                <a class="next" href="../004-variables/" title="Javascript Variables Tutorial">Variables &raquo;</a>-->
             </section>
             
@@ -195,13 +256,13 @@ console.log(typeof b); // -> number
     </div>
     
     <!-- Javascript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
-    
-    <!-- JSBox -->
-    <link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
-    <script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bbbbe907e85e8c"></script>
+
+<!-- JSBox -->
+<link rel="stylesheet" href="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.css">
+<script src="//jsbox.politejs.com/jsbox/latest-stable/jquery.jsbox.min.js"></script>
     
     
 </body>
