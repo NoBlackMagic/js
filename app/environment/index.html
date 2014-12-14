@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>The Environment is the browser | JS Spells</title>
+    <link rel="import-html" href="../assets/includes/meta-tags.inc.html">
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link rel="import-html" href="../assets/includes/ga.inc.html" params="qa:'UA-52991368-2'">
+    
+    <link rel="stylesheet" href="/assets/index.css" id="wks">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <link rel="import-html" href="../assets/includes/nbm-logo.inc.html">
+            <link rel="import-html" href="../assets/includes/js-spells.menu.inc.html">
+            <link rel="import-html" href="../assets/includes/mailchimp.inc.html">
+            <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
+        </header>
+
+        <article>
+
+            <section class="start-block-article">
+                <h1>The Environment <small>JS Spells | Basic</small></h1>
+                <blockquote>
+                    Javascript lives within an HTML web page
+                </blockquote>
+                <p>
+                    <small>
+                        Of course there is the <em>NodeJS</em> exception but for the purpose of these tutorials
+                        we consider the <strong>client side usage of JS</strong>.
+                    </small>
+                </p>
+                <p>
+                    So then <strong>Javascript works with the HTML document that contains or loads the script</strong>.
+                </p>
+                <p>
+                    This sentence implies both benefits and restrictions (most of them are tied to secutiry reasons)
+                    than we need to learn and understant in order to get the most efficient development experience.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Embedded Javascript</h2> 
+                <p>
+                    The right place where to put your first Javascript instruction is a <code>&lt;script></code> tag:
+                </p>
+                <div class="code-block">
+<pre>
+&lt;body>
+    &lt;script>
+        alert('I am Javascript');
+    &lt;/script>
+&lt;/body>
+</pre>
+                </div>
+                <p>
+                    <small>
+                        You can place such tag in both <code>&lt;head></code> and <code>&lt;body></code> but keep in mind
+                        that any Javascript code you place into the document's <code>&lt;head></code> will take some
+                        execution time which delays the page rendering.
+                    </small>
+                </p>
+            </section>
+            
+            <section>
+                <h2>Linked Javascript</h2>
+                <p>
+                    When your code grows big you may find a good practice to move it to dedicated <code>.js</code> files
+                    which you link within the document:
+                </p>
+                <div class="code-block">
+<pre>
+&lt;body>
+    &lt;script src="./path/to/my/script.js">&lt;/script>
+&lt;/body>
+</pre>
+                </div>
+                <p>
+                    <small>
+                        This is the classic approach to link libraries such <em>jQuery</em>.<br>
+                        If you place such instructions into the document's <code>&lt;head></code> you'll delay
+                        the page rendering of both download time + execution time.
+                    </small>
+                </p>
+            </section>
+            
+            <section>
+                <blockquote>
+                    Always remember that <strong>the best place for Javascript</strong> is the document's body close to the <code>&lt;/body></code> tag!
+                </blockquote>
+            </section>
+            
+            
+            <section>
+                <h2>Live Exercises</h2>
+                <p>
+                    This Javascript tutorial uses a <strong>live exercise</strong> approach which mean that you
+                    will face a lot of <strong>hands on code challenges</strong> right during the learning process.
+                </p>
+                
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox data-autosize>
+                        <pre data-js>
+/*
+this exercise is just empty.
+you can run it but there is no exercise to solve.
+*/
+                        </pre>
+                    </div>
+                </div>
+                
+                <p>
+                    When you try to solve an exercise <strong>you can succeed or you can fail</strong>.
+                </p>
+                
+                <p>
+                    These outcomes are highlighted by a <strong>green or red</strong> background:
+                </p>
+                
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox data-autosize>
+                        <pre data-js>
+    /*
+    this exercise will always success,
+    as long you don't write crapy code!
+    */
+                        </pre>
+                        <code data-test="true">this exercise will always succeed</code>
+                    </div>
+                </div>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox data-autosize>
+                        <pre data-js>
+    /*
+    this exercise will always fail,
+    it doesn't matter what code you write
+    */
+                        </pre>
+                        <code data-test="false">this exercise will always fail</code>
+                    </div>
+                </div>
+                
+                <p>
+                    Sometimes you will try to write Javascript code... but you'll just write
+                    something that is not actually JS.
+                </p>
+                <p>
+                    I such cases the exercise box will try to run your code for a while but then
+                    she will ask you to do a good code review:
+                </p>
+                
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise Sample:</h3>
+                    <div data-jsbox data-autosize>
+                        <pre data-js>this is just not Javascript!</pre>
+                    </div>
+                </div>
+                
+                <p>
+                    Starting from the next lesson on you will use that exercise to practice with
+                    the concept you learn.
+                </p>
+                <p>
+                    It will be a <strong>continuous practice approach</strong> which scope is to maximise the amount
+                    of things that you can learn.
+                </p>
+                <blockquote>
+                    <p>
+                        Remember to always <strong>try to reproduce all the code you learn</strong> and the exercises
+                        you solve <strong>as stand alone web pages</strong>.
+                    </p>
+                    <p>
+                        To <strong>practice with the browser's environment</strong> it's extremely important!
+                    </p>
+                </blockquote>
+    
+            </section>
+            
+            <section class="go-tutorial clearfix">
+                <a class="next" href="/hello-world/" title="javascript hello world">Hello World &raquo;</a>
+            </section>
+            
+        </article>
+    </div>
+    
+    <link rel="import-html" href="../assets/includes/js-spells.scripts.inc.html">
+</body>
+</html>

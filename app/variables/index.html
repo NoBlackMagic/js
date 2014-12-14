@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Variables | JS Spells - BASIC | expressions, variables, conditionals, functions, arrays, objects, loops</title>
+    <link rel="import-html" href="../assets/includes/meta-tags.inc.html">
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link rel="import-html" href="../assets/includes/ga.inc.html" params="qa:'UA-52991368-2'">
+    
+    <link rel="stylesheet" href="/assets/index.css" id="wks">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <link rel="import-html" href="../assets/includes/nbm-logo.inc.html">
+            <link rel="import-html" href="../assets/includes/js-spells.menu.inc.html">
+            <link rel="import-html" href="../assets/includes/mailchimp.inc.html">
+            <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
+        </header>
+
+        <article>
+
+            <section class="start-block-article">
+                <h1>Variables <small>JS Spells | Basic</small></h1>
+                <blockquote>
+                    <p>
+                        Variables <strong>are containers</strong> of data: numbers, strings, ...
+                    </p>
+                </blockquote>
+                <p>
+                    You can think to a variable as <strong>a box with a label</strong>. 
+                </p>
+                <p>
+                    It doesn't really matter what you put inside that box, the important part is that 
+                    <strong>you can refer to the box content using its label</strong>.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Create a brand new variable</h2>
+                <p>
+                    To create a new variable you can use the operator <code>var</code> followed by the name you
+                    want to assing to that variable:
+                </p>
+                <pre>var name;</pre>
+                <p>
+                    This is a complete and valid instruction which means:
+                </p>
+                <pre>&raquo; make a box and apply the label "name" on it</pre>
+                
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Do It Yourself!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1" data-autosize>
+                        <pre data-test="testToCreateVariable()">create a variable named "surname"</pre>
+                        <pre data-js></pre>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Feed variables with contents</h2>
+                <p>
+                    Empty boxes are just useless so we need to learn how to
+                    put some content into a variable.
+                </p>
+                <p>
+                    The simplest way to do it is when you create the new variable:
+                </p>
+                <p>
+                    <pre>var name = 'Luke Skywalker';</pre>
+                </p>
+                <p>
+                    But you can also use existing variables and change their contents on the fly:
+                </p>
+                <pre>name = 'Darth Vader';</pre>
+                <p>
+                    <small>
+                        <b>NOTE:</b> if you have already created the variable then is an error to 
+                        use the <code>var</code> operator again! It's like destroying the box and then
+                        create a new one with the same lable!
+                    </small>
+                </p>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Do It Yourself!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1" data-autosize>
+                        <pre data-artifact>var name = 'Luke Skywalker';</pre>
+                        <pre data-test="testToAssignContentsToVariables()">variable <code>name</code> <b>already exists</b> and contains "Luke Skywalker", turn it to the dark side of the Force by assigning "Darth Vader" to the variable <code>name</code>.<br><br>hint &raquo; try to run <code>console.log(name)</code> to investigate the current value of <code>name</code>.</pre>
+                        <pre data-js></pre>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Reading contents fro a variable</h2>
+                <p>
+                    When a variable exists you can access it's content by just using the <strong>variable name</strong>:
+                </p>
+                <pre>var name = 'Luke Skywalker';
+console.log(name); // -> Luke Skywalker</pre>
+                <p>
+                   When it comes to read variable it is more likely that you want to perform some <strong>operations
+                   within variables</strong> and - maybe - save the result in a brand new one:
+                </p>
+                <pre>var num1 = 10;
+var num2 = 20;
+var result = num1 + num2;</pre>
+                <p>
+                    In the last line of the previous code we <strong>read</strong> <code>num1</code> and <code>num2</code> values, we use
+                    them within a <em>sum operation</em> and then we <strong>assign</strong> the resulting value to a new
+                    variable named <code>result</code>.
+                </p>
+                <p>
+                    <strong>It is actually pretty important to understand that in this single line of code we perform 5 instructions:</strong>
+                </p>
+                <ol>
+                    <li>create a new variable <code>result</code></li>
+                    <li>read <code>num1</code></li>
+                    <li>read <code>num2</code></li>
+                    <li>sum <code>num1</code>'s value with <code>num2</code>'s value</li>
+                    <li>assign the result of the previous expression to <code>result</code></li>
+                </ol>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Do It Yourself!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1" data-autosize>
+                        <pre data-test="testReadVariableContent()">complete the existing code in order to <strong>create</strong> a <code>fullName</code> variable which should contains "Luke Skywalker"</pre>
+                        <pre data-js>var name = 'Luke';
+var surname = 'Skywalker';</pre>
+
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Investigating the type of a variable</h2>
+                <p>
+                    When dealing with variables should be really useful to investigate the type of a given variable name.
+                </p>
+                <blockquote>
+                    <p>
+                        Does it contain a string? Or a number?
+                    </p>
+                </blockquote>
+                <p>
+                    <b>Scenario:</b> you need to sum 2 variables but you want to be sure that thei contains
+                    real numbers:
+                </p>
+                <pre>var a = '1';
+console.log(typeof a); // -> string
+
+var b = 1;
+console.log(typeof b); // -> number
+</pre>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Do It Yourself!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1,chai,sinon" data-autosize>
+                        <pre data-artifact="artifactInvestigateVariableContent()"></pre>
+                        <pre data-test="testInvestigateVariableContent()">this box define the variable "name" and "age", investigate their types using <code>console.log</code>!</pre>
+                        <pre data-js></pre>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <section class="go-tutorial clearfix">
+                <a class="prev" href="/data-types/" title="Javascript Data Types: string, number, boolean, arrays, objects">&laquo; Data Types</a>
+<!--                <a class="next" href="../004-variables/" title="Javascript Variables Tutorial">Variables &raquo;</a>-->
+            </section>
+            
+        </article>
+        
+    </div>
+    
+    <link rel="import-html" href="../assets/includes/js-spells.scripts.inc.html">
+    
+    
+</body>
+</html>
