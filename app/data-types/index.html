@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Javascript Data Types: string, number, boolean, arrays, objects | JS Spells</title>
+    <link rel="import-html" href="../assets/includes/meta-tags.inc.html">
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link rel="import-html" href="../assets/includes/ga.inc.html" params="qa:'UA-52991368-2'">
+    
+    <link rel="stylesheet" href="/assets/index.css" id="wks">
+    <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <link rel="import-html" href="../assets/includes/nbm-logo.inc.html">
+            <link rel="import-html" href="../assets/includes/js-spells.menu.inc.html">
+            <link rel="import-html" href="../assets/includes/mailchimp.inc.html">
+            <div class="addthis_sharing_toolbox" style="margin-left:5px;margin-top:30px;text-align:center"></div>
+        </header>
+
+        <article>
+
+            <section class="start-block-article">
+                <h1>Data Types <small>JS Spells</small></h1>
+                <p>
+                    The basic building blocks of a programming language are <em>data types</em>.
+                </p>
+                <p>
+                    You do math operations with <strong>numbers</strong>, you can validate a mail addess <strong>string</strong>,
+                    you take decision with a <strong>true/false</strong> value.
+                </p>
+                <p>
+                    As <em>Javascript</em> is a <a href="http://en.wikipedia.org/wiki/Formal_language" target="_blank">formal language</a> 
+                    you need to master the syntax that you need to use to work with data types.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Strings</h2>
+                <p>
+                    Strings are the most used <em>data type</em> in a normal Javascript script.<br> 
+                    We use strings to show messages, and to retrieve some data input.
+                </p>
+                <p>
+                    A Javascript string is a list of characters, punctuation and numbers delimited by an apix like "<code>'</code>":
+                </p>
+                <pre><code>'this is a string';</code></pre>    
+                <p>
+                    the "<code>;</code>" character <strong>after</strong> the closing delimiter is an <strong>instruction delimiter</strong>
+                    and Javascript uses it to explicitly <strong>divide different instructions</strong>.
+                </p>
+                <blockquote class="inline">
+                    <p>
+                        In point of fact just to declare a string is a perfect instruction in Javascript so it is
+                        good practice to put the "<code>;</code>" at the end.
+                    </p>
+                </blockquote>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: create a string value!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1">
+                        <pre data-test="testNameAsString()">write your name as string</pre>
+                        <pre data-js></pre>
+                    </div>
+                </div>
+                <p>
+                    The most common Javascript operation is <strong>string concatenation</strong> with which you can 
+                    <strong>join two or more strings</strong> to become one single data unit.
+                </p>
+                <pre><code>'hello' + ' ' + 'world';</code></pre>
+                <p>
+                    The code above creates 3 strings and uses the "<code>+</code>" <em>operator</em> to concatenate them.
+                </p>
+                <p>
+                    The outcome of such operation is:
+                </p>
+                <pre><code>'hello world'</code></pre>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: concatenate strings!</h3>
+                    <div data-jsbox data-jsbox-scripts="jsbox-tests.js?v1">
+                        <pre data-test="testStringConcatenation()">write your <b>full name</b> as concatenation of your <code>name</code> and <code>surname</code> strings</pre>
+                        <pre data-js></pre>
+                    </div>
+                </div>
+                <p>
+                    In Javascript <strong>a simple string is more than just a string</strong>.<br>
+                </p>
+                <p>
+                    A string is an <strong>object</strong> that have properties and methods. You can read the
+                    <code>length</code> of a string, find/replace sub parts of it, transform it the way you want.
+                </p>
+                <div data-jsbox>
+                    <pre data-js>// try to run this code:
+console.log('JS Spells'.length);</pre>
+                </div>
+                <blockquote class="inline">
+                    <p>
+                        In the example above we use <code>console.log()</code> which is an extremely useful tool for 
+                        <strong>investigating what's going on</strong> within our code.
+                    </p>
+                </blockquote>
+                <p>
+                    Mozilla Developer Network (MDN) provides an exaustive documentations of the <em>String object</em>
+                    in Javascript:
+                </p>
+                <p>
+                    <small>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a>
+                    </small>
+                </p>
+                <p>
+                    Often you can just <strong>search for good documentation</strong> by prefixing your Google's queries with "MDN":
+                </p>
+                <blockquote class="inline">
+                    <p><small>google:</small> "MDN string uppercase"</p>
+                </blockquote>
+                <p>
+                    It's really likely that the first result it's a link to the correct page in MDN!
+                </p>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: uppercase your name!</h3>
+                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                        <pre data-artifact="artifactNameCapitalized()"></pre>
+                        <pre data-test="testNameCapitalized()">write your name as lowercase string <b>then uppercase</b> it</pre>
+                        <pre data-js></pre>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Numbers</h2>
+                <p>
+                    In Javascript you can use numbers and mathematical expressions to do calculations:
+                </p>
+                <div data-jsbox><code>// simple operations:
+console.log('1 + 1 =', 1 + 1);
+console.log('2 * 2 =', 1 * 1);
+                
+// Take a google at "MDN Math"
+console.log('floor of 4.66 =', Math.floor(4.66));               
+console.log('round of 4.66 =', Math.round(4.66));
+</code></div>
+                <blockquote class="inline">
+                    <p>
+                        Even if you are yet to fully understand what an <code>object</code> and a <code>funtion</code> is you can 
+                        try to make a good use of the <code>Math</code> library which provides a lot of extremely useful utilities!
+                    </p>
+                </blockquote>
+                
+                <p>
+                    Numbers in Javascript are coded as they are, <strong>without delimiters</strong>. 
+                    If a number has decimals then you use a single dot "<code>.</code>" as decimal delimiter.
+                </p>
+                <p>
+                    A number which has no decimal part is called <code>integer</code>, a number which has a decimal part is
+                    called a <code>float</code>:
+                </p>
+                <pre>123; // this is an INTEGER number
+123.456; // this is a FLOAT number
+               
+'123'; // this is not a number! this is a STRING!
+'123.456'; // this is not a number either! just another string!</pre>
+                
+<!--
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Exercise: sum two numbers!</h3>
+                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                        <pre data-test="testNameCapitalized()">use the mathemetical <b>sum operator</b> to produce the number <code>66</code>.</pre>
+                        <pre data-js></pre>
+                    </div>
+                    <script src="//noblackmagic.com/assets/js/disqus.js?blog=js-spells&thread=data-types/number/sum"></script>
+                </div>
+-->
+                
+            </section>
+            
+            <section>
+                <h2>Boolean</h2>
+                <p>work in progress</p>
+            </section>
+            
+            <section id="arrays">
+                <h2>Arrays</h2>
+                <p>
+                    An array is a data structure that contains an <strong>ordered list of items</strong>.
+                </p>
+                <div data-jsbox data-autosize><code>['blue', 'red', 'green'];</code></div>
+                <p>
+                    Arrays are <em>objects</em> just like strings so you can use properties and methods
+                    to investigate or modify the content of an array:
+                </p>
+                <div data-jsbox data-autosize><code>console.log(['blue', 'red', 'green'].length);</code></div>
+                <p>
+                    Each item of an array is given an <em>index</em> which can be used to refer 
+                    to the item itself later on. 
+                </p>
+<pre><code>// array in javascript
+['blue', 'red', 'green']
+
+// how indexes ar assigned
+[0] => 'blue'
+[1] => 'red'
+[2] => 'green'
+</code></pre>
+                <blockquote class="inline">
+                    <p>
+                        Indexes starts from 0 (zero).<br>
+                        The index of the last item is alwasy <code>(arr.length - 1)</code>.
+                    </p>
+                </blockquote>
+                <p>
+                    Each array item can contain every data types, numbers, strings, etc.
+                </p>
+                <p>
+                    Mozilla Developer Network (MDN) provides an exaustive documentations of the <em>Array object</em>
+                    in Javascript:
+                </p>
+                <p>
+                    <small>
+                    <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+                    </small>
+                </p>
+                <div class="jsbox-exercise">
+                    <h3 class="title-code-block">Do It Yourself!</h3>
+                    <div data-jsbox data-jsbox-scripts="sinon,jsbox-tests.js?v1">
+                        <pre data-artifact="artifactArrayReverse()"></pre>
+                        <pre data-test="testArrayReverse()">given an array of numbers, reverse it!</small></pre>
+                        <pre data-js>var nums = [1,2,3,4,5];</pre>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Objects</h2>
+                <p>work in progress</p>
+            </section>
+            
+            <section class="go-tutorial clearfix">
+                <a class="prev" href="/hello-world/" title="javascript hello world">&laquo; Hello World</a>
+                <a class="next" href="/variables/" title="javascript variables tutorial">Variables &raquo;</a>
+            </section>
+            
+        </article>
+        
+    </div>
+    
+    <link rel="import-html" href="../assets/includes/js-spells.scripts.inc.html">
+</body>
+</html>
